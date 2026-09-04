@@ -2,8 +2,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-24 border-t border-white/5 bg-ink-900">
-      <div className="mx-auto grid max-w-7xl gap-14 px-6 py-16 md:grid-cols-4 md:px-8">
+    <footer
+      className="relative mt-20 border-t border-white/5 bg-ink-900 md:mt-24"
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+    >
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-4 md:gap-14 md:px-8 md:py-16">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-signal text-black">
@@ -77,7 +80,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 px-6 py-6 md:flex-row md:items-center md:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 px-5 py-6 md:flex-row md:items-center md:px-8">
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()} Fahrzeugtechnik Staudt · Inhaber Eric Staudt
           </p>

@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function ImpressumPage() {
   return (
-    <section className="relative pt-40 md:pt-56">
-      <div className="mx-auto max-w-3xl px-6 pb-24 md:px-8">
+    <section className="relative pt-28 md:pt-56">
+      <div className="mx-auto max-w-3xl px-5 pb-16 md:px-8 md:pb-24">
         <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
           <span className="h-1.5 w-1.5 rounded-full bg-signal" />
           Rechtliches
@@ -18,7 +18,7 @@ export default function ImpressumPage() {
           Impressum
         </h1>
 
-        <div className="glass mt-10 space-y-8 rounded-3xl p-8 text-[15.5px] leading-relaxed text-white/80">
+        <div className="glass mt-8 space-y-8 rounded-3xl p-6 text-[15.5px] leading-relaxed text-white/80 md:mt-10 md:p-8">
           <div>
             <div className="text-[11px] uppercase tracking-[0.22em] text-white/50">
               Betreiber

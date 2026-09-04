@@ -162,9 +162,9 @@ function ServiceCard({ s, index }: { s: Service; index: number }) {
 
 export default function ServicesShowcase() {
   return (
-    <section className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="mb-16 flex flex-col items-start justify-between gap-8 md:mb-24 md:flex-row md:items-end">
+    <section className="relative py-20 md:py-32">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="mb-12 flex flex-col items-start justify-between gap-6 md:mb-24 md:flex-row md:items-end md:gap-8">
           <div>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
               <span className="h-1.5 w-1.5 rounded-full bg-signal" />
@@ -182,7 +182,7 @@ export default function ServicesShowcase() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-24 md:gap-32">
+        <div className="flex flex-col gap-16 md:gap-32">
           {services.map((s, i) => (
             <ServiceCard key={s.no} s={s} index={i} />
           ))}

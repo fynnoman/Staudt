@@ -64,7 +64,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-[100svh] w-full overflow-hidden pt-32 md:pt-40"
+      className="relative min-h-[100svh] w-full overflow-hidden pt-24 md:pt-40"
     >
       {/* Ambient background */}
       <motion.div
@@ -90,7 +90,7 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-12 gap-8 px-6 pb-16 md:gap-10 md:px-8 md:pb-24">
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-12 gap-10 px-5 pb-14 md:gap-10 md:px-8 md:pb-24">
         {/* LEFT — copy */}
         <div className="col-span-12 md:col-span-7">
           <div className="mb-6 flex flex-wrap items-center gap-2">
@@ -107,7 +107,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="balance text-[clamp(2.8rem,7.6vw,6.8rem)] font-semibold leading-[0.93] tracking-tightest text-white">
+          <h1 className="balance text-[clamp(2.4rem,7.6vw,6.8rem)] font-semibold leading-[0.95] tracking-tightest text-white">
             Werkstatt,
             <br />
             die{" "}
@@ -139,10 +139,10 @@ export default function Hero() {
             verdient einen Meister.
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href="/kontakt"
-              className="group inline-flex items-center gap-2 rounded-xl bg-signal px-5 py-3.5 text-[15px] font-semibold text-black shadow-signal transition hover:bg-signal-soft"
+              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-signal px-5 py-3.5 text-[15px] font-semibold text-black shadow-signal transition hover:bg-signal-soft"
             >
               Termin sichern
               <svg
@@ -160,7 +160,7 @@ export default function Hero() {
             </Link>
             <a
               href="tel:+4968319618905"
-              className="inline-flex items-center gap-3 rounded-xl border border-white/12 bg-white/[0.03] px-5 py-3.5 text-[15px] font-medium text-white/90 backdrop-blur transition hover:bg-white/[0.06]"
+              className="inline-flex min-h-[48px] items-center justify-center gap-3 rounded-xl border border-white/12 bg-white/[0.03] px-5 py-3.5 text-[15px] font-medium text-white/90 backdrop-blur transition hover:bg-white/[0.06]"
             >
               <span className="grid h-6 w-6 place-items-center rounded-md bg-white/10">
                 <svg
@@ -178,9 +178,9 @@ export default function Hero() {
           </div>
 
           {/* Live status ribbon */}
-          <div className="mt-12 grid max-w-2xl grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur">
-            <div className="flex items-center gap-3 border-r border-white/8 px-4 py-4">
-              <span className="relative flex h-2 w-2">
+          <div className="mt-10 grid max-w-2xl grid-cols-1 divide-y divide-white/8 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            <div className="flex items-center gap-3 px-4 py-3.5">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span
                   className={`absolute inline-flex h-full w-full animate-ping rounded-full opacity-70 ${
                     open ? "bg-emerald-400" : "bg-white/40"
@@ -192,17 +192,17 @@ export default function Hero() {
                   }`}
                 />
               </span>
-              <div>
+              <div className="min-w-0">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
                   Status
                 </div>
-                <div className="text-[13px] font-medium text-white">
+                <div className="truncate text-[13px] font-medium text-white">
                   {open ? "Geöffnet" : "Geschlossen"}
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-3 border-r border-white/8 px-4 py-4">
-              <span className="grid h-6 w-6 place-items-center rounded-md bg-signal/15 text-signal">
+            <div className="flex items-center gap-3 px-4 py-3.5">
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-signal/15 text-signal">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-3.5 w-3.5"
@@ -214,17 +214,17 @@ export default function Hero() {
                   <path d="M16 2v4M8 2v4M3 10h18" />
                 </svg>
               </span>
-              <div>
+              <div className="min-w-0">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
                   TÜV vor Ort
                 </div>
-                <div className="text-[13px] font-medium text-white">
+                <div className="truncate text-[13px] font-medium text-white">
                   Donnerstags · Dekra
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-3 px-4 py-4">
-              <span className="grid h-6 w-6 place-items-center rounded-md bg-white/10 text-white">
+            <div className="flex items-center gap-3 px-4 py-3.5">
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-white/10 text-white">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-3.5 w-3.5"
@@ -236,11 +236,11 @@ export default function Hero() {
                   <circle cx="12" cy="10" r="2.5" />
                 </svg>
               </span>
-              <div>
+              <div className="min-w-0">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
                   Standort
                 </div>
-                <div className="text-[13px] font-medium text-white">
+                <div className="truncate text-[13px] font-medium text-white">
                   Kohlbrunnenstraße 20
                 </div>
               </div>
@@ -250,13 +250,13 @@ export default function Hero() {
 
         {/* RIGHT — tilted image card + orbit stats */}
         <div className="col-span-12 md:col-span-5">
-          <div className="relative mx-auto max-w-md md:mx-0 md:ml-auto">
+          <div className="relative mx-auto max-w-[300px] md:mx-0 md:ml-auto md:max-w-md">
             {/* Vertical rail label */}
             <div className="pointer-events-none absolute -left-8 top-8 hidden origin-top-left rotate-90 text-[10px] uppercase tracking-[0.42em] text-white/35 md:block">
               Bühne · 03 · Live
             </div>
 
-            <div className="relative -rotate-[3deg]">
+            <div className="relative -rotate-[2deg] md:-rotate-[3deg]">
               <div className="corner-mark relative">
                 <div className="glass overflow-hidden rounded-3xl">
                   <div className="relative aspect-[4/5] w-full overflow-hidden">
@@ -357,20 +357,20 @@ export default function Hero() {
       </div>
 
       {/* Bottom spec bar */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-8 md:px-8">
-        <div className="glass grid grid-cols-2 divide-x divide-white/8 overflow-hidden rounded-2xl md:grid-cols-4">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pb-8 md:px-8">
+        <div className="glass grid grid-cols-2 divide-x divide-y divide-white/8 overflow-hidden rounded-2xl md:grid-cols-4 md:divide-y-0">
           {[
             { k: "6", l: "Kernleistungen", s: "aus einer Hand" },
             { k: "Do.", l: "TÜV vor Ort", s: "durch Dekra" },
             { k: "1×1", l: "Meisterbetrieb", s: "geführt" },
-            { k: "0€", l: "Diagnose-Surprise", s: "nur nach Freigabe" }
+            { k: "0€", l: "Diagnose", s: "nur nach Freigabe" }
           ].map((s) => (
-            <div key={s.l} className="flex flex-col gap-1 px-5 py-4">
-              <div className="spec-num text-2xl font-semibold text-white">
+            <div key={s.l} className="flex flex-col gap-1 px-4 py-3.5 md:px-5 md:py-4">
+              <div className="spec-num text-xl font-semibold text-white md:text-2xl">
                 {s.k}
               </div>
               <div className="text-[12.5px] text-white/85">{s.l}</div>
-              <div className="text-[10.5px] uppercase tracking-[0.2em] text-white/40">
+              <div className="hidden text-[10.5px] uppercase tracking-[0.2em] text-white/40 md:block">
                 {s.s}
               </div>
             </div>
@@ -379,7 +379,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll cue */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-3 z-10 flex justify-center">
+      <div className="pointer-events-none absolute inset-x-0 bottom-3 z-10 hidden justify-center md:flex">
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

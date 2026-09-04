@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export default function Standort() {
   return (
-    <section className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="grid gap-10 md:grid-cols-12 md:gap-12">
+    <section className="relative py-20 md:py-32">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="grid gap-8 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
               <span className="h-1.5 w-1.5 rounded-full bg-signal" />
@@ -88,7 +88,7 @@ export default function Standort() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="glass relative overflow-hidden rounded-3xl md:col-span-7"
           >
-            <div className="aspect-[4/3] w-full">
+            <div className="aspect-square w-full md:aspect-[4/3]">
               <iframe
                 title="Standort Fahrzeugtechnik Staudt"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=6.7480%2C49.3120%2C6.7680%2C49.3260&layer=mapnik&marker=49.3193%2C6.7550"

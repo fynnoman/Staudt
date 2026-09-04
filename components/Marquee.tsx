@@ -19,7 +19,7 @@ const items = [
 
 export default function Marquee() {
   return (
-    <section aria-hidden className="relative overflow-hidden border-y border-white/5 bg-ink-900/60 py-6">
+    <section aria-hidden className="relative overflow-hidden border-y border-white/5 bg-ink-900/60 py-5 md:py-6">
       <motion.div
         animate={{ x: ["0%", "-50%"] }}
         transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
@@ -28,7 +28,7 @@ export default function Marquee() {
         {[...items, ...items].map((it, i) => (
           <span
             key={i}
-            className="mx-8 flex items-center gap-8 text-[15px] uppercase tracking-[0.28em] text-white/50"
+            className="mx-5 flex items-center gap-5 text-[13px] uppercase tracking-[0.28em] text-white/50 md:mx-8 md:gap-8 md:text-[15px]"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-signal" />
             {it}

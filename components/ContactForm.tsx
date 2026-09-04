@@ -39,7 +39,7 @@ export default function ContactForm() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-      className="glass rounded-3xl p-6 md:p-8"
+      className="glass rounded-3xl p-5 md:p-8"
     >
       <div className="grid gap-4 md:grid-cols-2">
         <label className="block">
@@ -97,15 +97,15 @@ export default function ContactForm() {
         />
       </label>
 
-      <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-        <p className="text-[12px] text-white/45">
+      <div className="mt-6 flex flex-col-reverse items-stretch gap-4 md:flex-row md:items-center md:justify-between">
+        <p className="text-[12px] leading-relaxed text-white/45">
           Mit dem Absenden willigen Sie in die Verarbeitung Ihrer Angaben zur
           Beantwortung Ihrer Anfrage ein.
         </p>
         <button
           type="submit"
           disabled={state === "sending"}
-          className="group inline-flex items-center gap-2 rounded-xl bg-signal px-5 py-3 text-[14.5px] font-semibold text-black shadow-signal transition hover:bg-signal-soft disabled:opacity-60"
+          className="group inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-signal px-5 py-3 text-[15px] font-semibold text-black shadow-signal transition hover:bg-signal-soft disabled:opacity-60 md:w-auto"
         >
           {state === "sent" ? "Danke!" : state === "sending" ? "Wird geöffnet …" : "Nachricht senden"}
           <svg viewBox="0 0 24 24" className="h-4 w-4 transition group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round">

@@ -14,7 +14,7 @@ export default function ContactCTA() {
   const scale = useTransform(scrollYProgress, [0, 1], [1.06, 1]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden py-24 md:py-36">
+    <section ref={ref} className="relative overflow-hidden py-20 md:py-36">
       <motion.div
         style={{ y, scale }}
         className="absolute inset-0 -z-10"
@@ -23,7 +23,7 @@ export default function ContactCTA() {
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-950/60 to-ink-950" />
       </motion.div>
 
-      <div className="mx-auto max-w-4xl px-6 text-center md:px-8">
+      <div className="mx-auto max-w-4xl px-5 text-center md:px-8">
         <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
           <span className="h-1.5 w-1.5 rounded-full bg-signal" />
           Termin
@@ -37,16 +37,16 @@ export default function ContactCTA() {
           realistischen Termin plus ehrlichen Kostenrahmen.
         </p>
 
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
           <a
             href="tel:+4968319618905"
-            className="group inline-flex items-center gap-2 rounded-xl bg-signal px-5 py-3.5 text-[15px] font-semibold text-black shadow-signal transition hover:bg-signal-soft"
+            className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-signal px-5 py-3.5 text-[15px] font-semibold text-black shadow-signal transition hover:bg-signal-soft"
           >
             06831 9618905
           </a>
           <Link
             href="/kontakt"
-            className="inline-flex items-center gap-2 rounded-xl border border-white/12 bg-white/[0.03] px-5 py-3.5 text-[15px] font-medium text-white/90 backdrop-blur transition hover:bg-white/[0.06]"
+            className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-white/12 bg-white/[0.03] px-5 py-3.5 text-[15px] font-medium text-white/90 backdrop-blur transition hover:bg-white/[0.06]"
           >
             Nachricht senden
             <span>→</span>

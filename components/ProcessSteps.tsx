@@ -43,9 +43,9 @@ export default function ProcessSteps() {
   const lineScale = useTransform(scrollYProgress, [0.1, 0.9], [0, 1]);
 
   return (
-    <section ref={ref} className="relative py-28 md:py-40">
-      <div className="mx-auto max-w-6xl px-6 md:px-8">
-        <div className="mb-16 md:mb-24">
+    <section ref={ref} className="relative py-20 md:py-32">
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
+        <div className="mb-12 md:mb-20">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
             <span className="h-1.5 w-1.5 rounded-full bg-signal" />
             So läuft's
@@ -55,7 +55,7 @@ export default function ProcessSteps() {
           </h2>
         </div>
 
-        <div className="relative grid gap-4 md:grid-cols-4 md:gap-6">
+        <div className="relative grid gap-3 sm:grid-cols-2 md:grid-cols-4 md:gap-6">
           {/* animated connector */}
           <div className="pointer-events-none absolute left-0 right-0 top-1/2 hidden h-px -translate-y-1/2 bg-white/8 md:block">
             <motion.div
@@ -71,9 +71,9 @@ export default function ProcessSteps() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="glass relative rounded-2xl p-6"
+              className="glass relative rounded-2xl p-5 md:p-6"
             >
-              <div className="mb-6 flex items-center justify-between">
+              <div className="mb-5 flex items-center justify-between md:mb-6">
                 <span className="text-signal font-mono text-sm spec-num">{s.no}</span>
                 <span className="rounded bg-white/8 px-1.5 py-0.5 font-mono text-[10px] uppercase text-white/60">
                   {s.kbd}

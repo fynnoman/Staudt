@@ -32,7 +32,7 @@ export default function StickyScaleImage({
   const textY = useTransform(scrollYProgress, [0.25, 0.6], [30, 0]);
 
   return (
-    <section ref={ref} className="relative h-[160vh] w-full">
+    <section ref={ref} className="relative h-[130vh] w-full md:h-[160vh]">
       <div className="sticky top-0 flex h-[100svh] w-full items-center justify-center overflow-hidden">
         <motion.div
           style={{ scale, backgroundImage: `url('${image}')` }}
@@ -46,16 +46,16 @@ export default function StickyScaleImage({
 
         <motion.div
           style={{ opacity: textOpacity, y: textY }}
-          className="relative z-10 mx-auto max-w-4xl px-6 text-center md:px-8"
+          className="relative z-10 mx-auto max-w-4xl px-5 text-center md:px-8"
         >
-          <p className="mb-6 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[10.5px] uppercase tracking-[0.22em] text-white/85 md:mb-6 md:text-[11px]">
             <span className="h-1.5 w-1.5 rounded-full bg-signal" />
             {eyebrow}
           </p>
-          <h2 className="balance text-[clamp(2rem,5.4vw,4.6rem)] font-semibold leading-[1.02] tracking-tightest text-white">
+          <h2 className="balance text-[clamp(1.9rem,7vw,4.6rem)] font-semibold leading-[1.04] tracking-tightest text-white">
             {headline}
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-[16px] leading-relaxed text-white/75 md:text-[18px]">
+          <p className="mx-auto mt-5 max-w-2xl text-[15.5px] leading-relaxed text-white/75 md:mt-6 md:text-[18px]">
             {body}
           </p>
         </motion.div>

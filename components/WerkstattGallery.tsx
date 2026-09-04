@@ -27,9 +27,9 @@ const shots = [
 
 export default function WerkstattGallery() {
   return (
-    <section className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="mb-12 flex items-end justify-between gap-6">
+    <section className="relative py-20 md:py-32">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="mb-10 flex items-end justify-between gap-6 md:mb-12">
           <div>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
               <span className="h-1.5 w-1.5 rounded-full bg-signal" />
@@ -45,7 +45,7 @@ export default function WerkstattGallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-6">
           {shots.slice(0, 3).map((s, i) => (
             <motion.div
               key={s.src}
@@ -57,8 +57,10 @@ export default function WerkstattGallery() {
                 delay: i * 0.08,
                 ease: [0.22, 1, 0.36, 1]
               }}
-              className={`glass group relative overflow-hidden rounded-3xl ${
-                i === 0 ? "aspect-[4/5]" : "aspect-[4/3]"
+              className={`glass group relative overflow-hidden rounded-2xl md:rounded-3xl ${
+                i === 0
+                  ? "col-span-2 aspect-[4/3] md:col-span-1 md:aspect-[4/5]"
+                  : "aspect-square md:aspect-[4/3]"
               }`}
             >
               <div

@@ -11,9 +11,9 @@ const stats = [
 
 export default function Trust() {
   return (
-    <section className="relative py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="glass relative overflow-hidden rounded-3xl p-8 md:p-12">
+    <section className="relative py-16 md:py-28">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="glass relative overflow-hidden rounded-3xl p-6 md:p-12">
           <div className="pointer-events-none absolute -right-32 -top-24 h-72 w-72 rounded-full bg-signal/20 blur-3xl" />
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
@@ -32,7 +32,7 @@ export default function Trust() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
               {stats.map((s, i) => (
                 <motion.div
                   key={s.l}
@@ -40,9 +40,9 @@ export default function Trust() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.6 }}
                   transition={{ duration: 0.55, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
-                  className="rounded-2xl border border-white/8 bg-white/[0.03] p-5"
+                  className="rounded-2xl border border-white/8 bg-white/[0.03] p-4 md:p-5"
                 >
-                  <div className="spec-num text-3xl font-semibold text-white">{s.n}</div>
+                  <div className="spec-num text-2xl font-semibold text-white md:text-3xl">{s.n}</div>
                   <div className="mt-2 text-[13px] text-white/85">{s.l}</div>
                   <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">
                     {s.sub}

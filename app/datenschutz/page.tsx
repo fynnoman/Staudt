@@ -172,8 +172,8 @@ const sections = [
 
 export default function DatenschutzPage() {
   return (
-    <section className="relative pt-40 md:pt-56">
-      <div className="mx-auto max-w-3xl px-6 pb-24 md:px-8">
+    <section className="relative pt-28 md:pt-56">
+      <div className="mx-auto max-w-3xl px-5 pb-16 md:px-8 md:pb-24">
         <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
           <span className="h-1.5 w-1.5 rounded-full bg-signal" />
           DSGVO
@@ -189,7 +189,7 @@ export default function DatenschutzPage() {
 
         <div className="mt-10 space-y-4">
           {sections.map((s) => (
-            <div key={s.n} className="glass rounded-2xl p-6 md:p-7">
+            <div key={s.n} className="glass rounded-2xl p-5 md:p-7">
               <div className="mb-3 flex items-baseline gap-3">
                 <span className="text-signal font-mono text-sm spec-num">
                   {s.n}

@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <>
-      <section className="relative pb-8 pt-40 md:pt-56">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
+      <section className="relative pb-6 pt-28 md:pb-8 md:pt-56">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
           <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
             <span className="h-1.5 w-1.5 rounded-full bg-signal" />
             Kontakt
           </p>
-          <h1 className="max-w-4xl text-[clamp(2.4rem,6vw,5.4rem)] font-semibold leading-[0.98] tracking-tightest">
+          <h1 className="max-w-4xl text-[clamp(2rem,6.6vw,5.4rem)] font-semibold leading-[1] tracking-tightest">
             Ihr Kontakt zu uns.<br />
             <span className="text-white/50">Kurzer Draht in die Meisterwerkstatt.</span>
           </h1>
@@ -29,11 +29,11 @@ export default function KontaktPage() {
         </div>
       </section>
 
-      <section className="relative py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <div className="grid gap-8 md:grid-cols-12 md:gap-12">
+      <section className="relative py-12 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="grid gap-6 md:grid-cols-12 md:gap-12">
             <div className="md:col-span-5">
-              <div className="glass rounded-3xl p-6 md:p-8">
+              <div className="glass rounded-3xl p-5 md:p-8">
                 <div className="text-[11px] uppercase tracking-[0.22em] text-white/50">
                   So erreichen Sie uns
                 </div>
@@ -84,7 +84,7 @@ export default function KontaktPage() {
                 </div>
               </div>
 
-              <div className="glass mt-6 rounded-3xl p-6 md:p-8">
+              <div className="glass mt-6 rounded-3xl p-5 md:p-8">
                 <div className="text-[11px] uppercase tracking-[0.22em] text-white/50">
                   Öffnungszeiten
                 </div>
