@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #26282a;
+  --bg-elev: #2c2e31;
+  --fg: #f1f2f4;
+  --muted: #9aa0aa;
+  --signal: #f4b400;
+  --line: rgba(255, 255, 255, 0.09);
+  --font-display: "Inter", ui-sans-serif, system-ui;
+  --font-body: "Inter", ui-sans-serif, system-ui;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-body);
+}
+
+/* Below-fold sections skip paint/layout until near-viewport */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
+
+::selection {
+  background: rgba(244, 180, 0, 0.35);
+  color: #fff;
+}
+
+/* Liquid Glass — real recipe: blur + saturation + subtle inset gloss + hairline */
+.glass {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+    0 24px 60px -24px rgba(0, 0, 0, 0.6);
+}
+
+.glass-strong {
+  background: linear-gradient(
+    180deg,
+    rgba(58, 61, 66, 0.82) 0%,
+    rgba(38, 40, 42, 0.82) 100%
+  );
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.glass-chip {
+  background: rgba(51, 53, 58, 0.65);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.hairline {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+.mask-fade-b {
+  mask-image: linear-gradient(180deg, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, black 60%, transparent 100%);
+}
+
+.spec-num {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.stripe-caution {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #f4b400 0 14px,
+    #0a0a0b 14px 28px
+  );
+}
+
+/* Hero heading balancing */
+.balance {
+  text-wrap: balance;
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #26282a;
+}
+::-webkit-scrollbar-thumb {
+  background: #464a51;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7079;
+}
+
+/* Corner crosshair markers */
+.corner-mark::before,
+.corner-mark::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: rgba(244, 180, 0, 0.8);
+}
+.corner-mark::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+}
+.corner-mark::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1.5px solid;
+  border-right: 1.5px solid;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
