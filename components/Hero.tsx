@@ -248,7 +248,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* RIGHT — tilted image card + orbit stats */}
+        {/* RIGHT — image card + orbit stats */}
         <div className="col-span-12 md:col-span-5">
           <div className="relative mx-auto max-w-[300px] md:mx-0 md:ml-auto md:max-w-md">
             {/* Vertical rail label */}
@@ -256,7 +256,24 @@ export default function Hero() {
               Bühne · 03 · Live
             </div>
 
-            <div className="relative -rotate-[2deg] md:-rotate-[3deg]">
+            {/* Depth: soft signal glow behind card */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -inset-8 -z-10 rounded-[2.25rem] bg-signal/10 blur-3xl"
+            />
+
+            {/* Depth: offset ghost frame behind card */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 hidden translate-x-3 translate-y-3 rounded-3xl border border-white/8 md:block"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, y: 24, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+              className="relative"
+            >
               <div className="corner-mark relative">
                 <div className="glass overflow-hidden rounded-3xl">
                   <div className="relative aspect-[4/5] w-full overflow-hidden">
@@ -351,7 +368,7 @@ export default function Hero() {
                   Do · 08:30
                 </div>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

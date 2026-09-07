@@ -43,9 +43,9 @@ export default function ProcessSteps() {
   const lineScale = useTransform(scrollYProgress, [0.1, 0.9], [0, 1]);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-32">
+    <section ref={ref} className="relative py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <div className="mb-12 md:mb-20">
+        <div className="mb-10 md:mb-14">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
             <span className="h-1.5 w-1.5 rounded-full bg-signal" />
             So läuft's

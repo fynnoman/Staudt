@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Standort() {
   return (
-    <section className="relative py-20 md:py-32">
+    <section className="relative py-14 md:py-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid gap-8 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5">

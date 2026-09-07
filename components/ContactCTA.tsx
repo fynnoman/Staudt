@@ -14,7 +14,7 @@ export default function ContactCTA() {
   const scale = useTransform(scrollYProgress, [0, 1], [1.06, 1]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden py-20 md:py-36">
+    <section ref={ref} className="relative overflow-hidden py-16 md:py-28">
       <motion.div
         style={{ y, scale }}
         className="absolute inset-0 -z-10"

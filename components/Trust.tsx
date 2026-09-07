@@ -11,7 +11,7 @@ const stats = [
 
 export default function Trust() {
   return (
-    <section className="relative py-16 md:py-28">
+    <section className="relative py-12 md:py-20">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="glass relative overflow-hidden rounded-3xl p-6 md:p-12">
           <div className="pointer-events-none absolute -right-32 -top-24 h-72 w-72 rounded-full bg-signal/20 blur-3xl" />

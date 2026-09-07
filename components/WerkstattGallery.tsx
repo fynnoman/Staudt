@@ -27,7 +27,7 @@ const shots = [
 
 export default function WerkstattGallery() {
   return (
-    <section className="relative py-20 md:py-32">
+    <section className="relative py-14 md:py-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mb-10 flex items-end justify-between gap-6 md:mb-12">
           <div>

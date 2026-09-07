@@ -32,7 +32,7 @@ export default function StickyScaleImage({
   const textY = useTransform(scrollYProgress, [0.25, 0.6], [30, 0]);
 
   return (
-    <section ref={ref} className="relative h-[130vh] w-full md:h-[160vh]">
+    <section ref={ref} className="relative h-[115vh] w-full md:h-[130vh]">
       <div className="sticky top-0 flex h-[100svh] w-full items-center justify-center overflow-hidden">
         <motion.div
           style={{ scale, backgroundImage: `url('${image}')` }}
