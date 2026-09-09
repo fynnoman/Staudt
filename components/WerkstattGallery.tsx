@@ -68,6 +68,11 @@ export default function WerkstattGallery() {
                 style={{ backgroundImage: `url('${s.src}')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                <span className="select-none text-[clamp(1.2rem,5.5vw,2.6rem)] font-bold uppercase tracking-[0.2em] text-white/25">
+                  Platzhalter
+                </span>
+              </div>
               <div className="absolute inset-x-5 bottom-4 flex items-center justify-between">
                 <span className="text-[13px] text-white/90">{s.caption}</span>
                 <span className="glass-chip rounded-full px-2.5 py-1 text-[10px] uppercase tracking-[0.22em] text-white/80">

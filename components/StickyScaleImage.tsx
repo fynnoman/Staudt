@@ -43,6 +43,11 @@ export default function StickyScaleImage({
           className="absolute inset-0 bg-ink-950"
         />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent via-ink-950/50 to-ink-950" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <span className="select-none text-[clamp(2.5rem,11vw,8rem)] font-bold uppercase tracking-[0.2em] text-white/20">
+            Platzhalter
+          </span>
+        </div>
 
         <motion.div
           style={{ opacity: textOpacity, y: textY }}

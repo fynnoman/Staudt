@@ -21,6 +21,11 @@ export default function ContactCTA() {
       >
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=2400&q=80')] bg-cover bg-center opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-950/60 to-ink-950" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <span className="select-none text-[clamp(2rem,9vw,6rem)] font-bold uppercase tracking-[0.2em] text-white/20">
+            Platzhalter
+          </span>
+        </div>
       </motion.div>
 
       <div className="mx-auto max-w-4xl px-5 text-center md:px-8">

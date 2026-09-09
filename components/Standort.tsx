@@ -91,7 +91,7 @@ export default function Standort() {
             <div className="aspect-square w-full md:aspect-[4/3]">
               <iframe
                 title="Standort Fahrzeugtechnik Staudt"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=6.7480%2C49.3120%2C6.7680%2C49.3260&layer=mapnik&marker=49.3193%2C6.7550"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=6.7655%2C49.3156%2C6.7855%2C49.3296&layer=mapnik&marker=49.3226%2C6.7755"
                 className="h-full w-full grayscale contrast-[1.05] [filter:invert(0.92)_hue-rotate(180deg)]"
                 loading="lazy"
               />

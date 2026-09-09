@@ -91,6 +91,11 @@ function ServiceCard({ s, index }: { s: Service; index: number }) {
               style={{ backgroundImage: `url('${s.image}')` }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+            <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <span className="select-none text-[clamp(1.6rem,7vw,4rem)] font-bold uppercase tracking-[0.2em] text-white/25">
+                Platzhalter
+              </span>
+            </div>
             <div className="absolute inset-x-6 bottom-5 flex items-center justify-between">
               <span className="text-[11px] uppercase tracking-[0.22em] text-white/70">
                 Leistung {s.no}
