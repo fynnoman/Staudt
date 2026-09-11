@@ -96,9 +96,10 @@ export default function Standort() {
             <div className="aspect-square w-full md:aspect-[1/1]">
               <iframe
                 title="Standort Fahrzeugtechnik Staudt"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=6.7655%2C49.3156%2C6.7855%2C49.3296&layer=mapnik&marker=49.3226%2C6.7755"
-                className="h-full w-full grayscale contrast-[1.05] [filter:invert(0.92)_hue-rotate(180deg)]"
+                src="https://maps.google.com/maps?q=Kohlbrunnenstra%C3%9Fe%2020%2C%2066740%20Saarlouis&z=15&output=embed"
+                className="h-full w-full"
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/5" />
