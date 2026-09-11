@@ -91,15 +91,14 @@ export default function Standort() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="glass relative z-10 overflow-hidden rounded-3xl md:col-span-7 md:-mt-40 lg:-mt-56"
+            className="glass relative overflow-hidden rounded-3xl md:col-span-7"
           >
-            <div className="aspect-square w-full md:aspect-[1/1]">
+            <div className="aspect-square w-full md:aspect-[4/3]">
               <iframe
                 title="Standort Fahrzeugtechnik Staudt"
-                src="https://maps.google.com/maps?q=Kohlbrunnenstra%C3%9Fe%2020%2C%2066740%20Saarlouis&z=15&output=embed"
-                className="h-full w-full"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=6.7655%2C49.3156%2C6.7855%2C49.3296&layer=mapnik&marker=49.3226%2C6.7755"
+                className="h-full w-full grayscale contrast-[1.05] [filter:invert(0.92)_hue-rotate(180deg)]"
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/5" />
