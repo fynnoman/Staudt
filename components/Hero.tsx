@@ -144,6 +144,23 @@ export default function Hero() {
             verdient einen Meister.
           </p>
 
+          {/* Slogan signature */}
+          <div className="mt-8 flex items-center gap-5">
+            <img
+              src="/images/slogan-mir-schaffe-du-faehrscht.png"
+              alt="Mir schaffe, du fährscht!"
+              className="h-20 w-auto shrink-0 mix-blend-screen opacity-95 md:h-24"
+            />
+            <div className="hidden min-w-0 sm:block">
+              <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
+                Unser Motto
+              </div>
+              <div className="mt-1 text-[15px] font-medium italic leading-snug text-white/85">
+                „Mir schaffe, du fährscht!"
+              </div>
+            </div>
+          </div>
+
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href="/kontakt"
