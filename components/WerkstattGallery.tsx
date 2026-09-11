@@ -31,10 +31,15 @@ export default function WerkstattGallery() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mb-10 flex items-end justify-between gap-6 md:mb-12">
           <div>
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
-              <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-              Werkstatt
-            </p>
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              <p className="inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
+                <span className="h-1.5 w-1.5 rounded-full bg-signal" />
+                Werkstatt
+              </p>
+              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
+                Sektion 05
+              </span>
+            </div>
             <h2 className="max-w-2xl text-[clamp(2rem,4.4vw,3.6rem)] font-semibold leading-[1.02] tracking-tightest">
               Ordnung, Werkzeug, Handwerk.
             </h2>

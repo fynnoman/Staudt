@@ -29,10 +29,15 @@ export default function ContactCTA() {
       </motion.div>
 
       <div className="mx-auto max-w-4xl px-5 text-center md:px-8">
-        <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
-          <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-          Termin
-        </p>
+        <div className="mb-5 flex flex-wrap items-center justify-center gap-2">
+          <p className="inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
+            <span className="h-1.5 w-1.5 rounded-full bg-signal" />
+            Termin
+          </p>
+          <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
+            Sektion 07
+          </span>
+        </div>
         <h2 className="balance text-[clamp(2.2rem,5vw,4.2rem)] font-semibold leading-[1.02] tracking-tightest text-white">
           Auto in gute Hände geben.<br />
           <span className="text-white/60">Wir machen den Rest.</span>

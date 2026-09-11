@@ -18,9 +18,9 @@ const config: Config = {
           500: "#6b7079"
         },
         signal: {
-          DEFAULT: "#f4b400",
-          soft: "#ffd15c",
-          deep: "#c78e00"
+          DEFAULT: "#68B041",
+          soft: "#8CC968",
+          deep: "#4F8B2E"
         },
         rust: "#b23a1c",
         chrome: "#d7dbe0"
@@ -35,13 +35,13 @@ const config: Config = {
       },
       boxShadow: {
         glass: "0 1px 0 rgba(255,255,255,0.06) inset, 0 12px 40px -12px rgba(0,0,0,0.55)",
-        signal: "0 12px 32px -8px rgba(244,180,0,0.35)"
+        signal: "0 12px 32px -8px rgba(104,176,65,0.35)"
       },
       backgroundImage: {
         "grid-fade":
           "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
         "radial-glow":
-          "radial-gradient(1200px 600px at 50% -10%, rgba(244,180,0,0.18), transparent 60%)"
+          "radial-gradient(1200px 600px at 50% -10%, rgba(104,176,65,0.18), transparent 60%)"
       }
     }
   },

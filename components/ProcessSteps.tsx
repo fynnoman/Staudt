@@ -46,10 +46,15 @@ export default function ProcessSteps() {
     <section ref={ref} className="relative py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="mb-10 md:mb-14">
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
-            <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-            So läuft's
-          </p>
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <p className="inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
+              <span className="h-1.5 w-1.5 rounded-full bg-signal" />
+              So läuft's
+            </p>
+            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
+              Sektion 04
+            </span>
+          </div>
           <h2 className="max-w-3xl text-[clamp(2rem,4.4vw,3.6rem)] font-semibold leading-[1.05] tracking-tightest">
             Vom Anruf bis zur Schlüsselübergabe. Ohne Rätselraten.
           </h2>

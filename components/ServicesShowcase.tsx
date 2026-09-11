@@ -9,6 +9,8 @@ type Service = {
   copy: string;
   bullets: string[];
   image: string;
+  focus?: boolean;
+  focusLabel?: string;
 };
 
 const services: Service[] = [
@@ -17,7 +19,12 @@ const services: Service[] = [
     title: "Inspektion",
     copy:
       "Neu-, Jahres- oder Gebrauchtwagen: die Inspektion nach Herstellervorgabe hält Ihr Auto sicher und werterhaltend im Betrieb.",
-    bullets: ["Herstellervorgabe", "Digitales Prüfprotokoll", "Termingerecht"],
+    bullets: [
+      "Herstellervorgabe",
+      "Herstellergarantie bleibt erhalten",
+      "Digitales Prüfprotokoll",
+      "Termingerecht"
+    ],
     image:
       "https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=1600&q=80"
   },
@@ -34,10 +41,17 @@ const services: Service[] = [
     no: "03",
     title: "Glasservice",
     copy:
-      "Steinschlag oder Riss? Wir tauschen die Scheibe direkt aus, damit Sie sicher weiterfahren können. Kurzfristige Termine möglich.",
-    bullets: ["Steinschlagreparatur", "Kompletttausch", "Kurzfristig"],
+      "Autoglas-Spezialist mit direkter Partnerschaft zu den führenden Herstellern. Steinschlag, Riss oder Kompletttausch: schnell, sauber und mit Direktabrechnung über Ihre Versicherung.",
+    bullets: [
+      "Autoglas Spezialist Partner",
+      "Steinschlagreparatur",
+      "Kompletttausch",
+      "Direktabrechnung Versicherung"
+    ],
     image:
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1600&q=80",
+    focus: true,
+    focusLabel: "Spezialisierung"
   },
   {
     no: "04",
@@ -65,6 +79,48 @@ const services: Service[] = [
     bullets: ["Passendes Öl", "Filterwechsel", "Digital dokumentiert"],
     image:
       "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&w=1600&q=80"
+  },
+  {
+    no: "07",
+    title: "Unfallinstandsetzung",
+    copy:
+      "Nach dem Unfall zurück auf die Straße: fachgerecht instand gesetzt, mit sauberer Dokumentation für die Versicherung und ehrlicher Beratung, was wirklich nötig ist.",
+    bullets: [
+      "Karosserie- & Blecharbeiten",
+      "Achsvermessung",
+      "Gutachten & Versicherung",
+      "Ersatzteile in OE-Qualität"
+    ],
+    image:
+      "https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?auto=format&fit=crop&w=1600&q=80"
+  },
+  {
+    no: "08",
+    title: "Motor- & Getriebe­instandsetzung",
+    copy:
+      "Große Reparaturen statt teurem Neukauf: Motoren und Getriebe setzen wir fachgerecht instand, vom Zahnriemenschaden bis zur Kupplung, mit klarer Kostenaufstellung vorab.",
+    bullets: [
+      "Motor-Instandsetzung",
+      "Getriebe-Instandsetzung",
+      "Kupplung & Zahnriemen",
+      "Kostenvoranschlag vorab"
+    ],
+    image:
+      "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1600&q=80"
+  },
+  {
+    no: "09",
+    title: "Hebebühnen bis 6,5 t · auch Wohnmobile",
+    copy:
+      "Zwei starke Bühnen mit 5,5 t und 6,5 t Tragkraft. Dadurch reparieren wir nicht nur PKW und Transporter, sondern auch Wohnmobile in Werkstattqualität.",
+    bullets: [
+      "Bühne 5,5 t · PKW & Transporter",
+      "Bühne 6,5 t · Wohnmobile",
+      "Wartung, Bremsen, Fahrwerk",
+      "Termine für Camping-Saison"
+    ],
+    image:
+      "https://images.unsplash.com/photo-1600661653561-629509216228?auto=format&fit=crop&w=1600&q=80"
   }
 ];
 
@@ -96,13 +152,32 @@ function ServiceCard({ s, index }: { s: Service; index: number }) {
                 Platzhalter
               </span>
             </div>
+            <div
+              aria-hidden
+              className="pointer-events-none absolute left-6 top-5 select-none font-mono text-[clamp(4rem,10vw,7rem)] font-semibold leading-none tracking-tightest text-white/[0.07]"
+            >
+              №{s.no}
+            </div>
+            <div aria-hidden className="pointer-events-none absolute inset-0">
+              <div className="absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-white/40" />
+              <div className="absolute right-3 top-3 h-4 w-4 border-r-2 border-t-2 border-white/40" />
+              <div className="absolute bottom-3 left-3 h-4 w-4 border-b-2 border-l-2 border-white/40" />
+              <div className="absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-white/40" />
+            </div>
             <div className="absolute inset-x-6 bottom-5 flex items-center justify-between">
               <span className="text-[11px] uppercase tracking-[0.22em] text-white/70">
                 Leistung {s.no}
               </span>
-              <span className="glass-chip rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white/80">
-                Meister
-              </span>
+              {s.focus ? (
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-signal/60 bg-signal/15 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-signal">
+                  <span className="h-1.5 w-1.5 rounded-full bg-signal" />
+                  {s.focusLabel ?? "Fokus"}
+                </span>
+              ) : (
+                <span className="glass-chip rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white/80">
+                  Meister
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -171,10 +246,15 @@ export default function ServicesShowcase() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mb-10 flex flex-col items-start justify-between gap-6 md:mb-16 md:flex-row md:items-end md:gap-8">
           <div>
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
-              <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-              Portfolio
-            </p>
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              <p className="inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
+                <span className="h-1.5 w-1.5 rounded-full bg-signal" />
+                Portfolio
+              </p>
+              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
+                Sektion 02
+              </span>
+            </div>
             <h2 className="max-w-2xl text-[clamp(2.2rem,5vw,4rem)] font-semibold leading-[1.02] tracking-tightest">
               Alles für Ihren Wagen.<br />
               <span className="text-white/50">Aus einer Meisterhand.</span>

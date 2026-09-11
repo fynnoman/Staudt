@@ -8,10 +8,15 @@ export default function Standort() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid gap-8 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5">
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
-              <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-              Standort
-            </p>
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              <p className="inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
+                <span className="h-1.5 w-1.5 rounded-full bg-signal" />
+                Standort
+              </p>
+              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
+                Sektion 06
+              </span>
+            </div>
             <h2 className="text-[clamp(2rem,4.2vw,3.4rem)] font-semibold leading-[1.05] tracking-tightest">
               Kohlbrunnenstraße 20,<br />
               <span className="text-white/55">66740 Saarlouis.</span>
@@ -86,9 +91,9 @@ export default function Standort() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="glass relative overflow-hidden rounded-3xl md:col-span-7"
+            className="glass relative z-10 overflow-hidden rounded-3xl md:col-span-7 md:-mt-40 lg:-mt-56"
           >
-            <div className="aspect-square w-full md:aspect-[4/3]">
+            <div className="aspect-square w-full md:aspect-[1/1]">
               <iframe
                 title="Standort Fahrzeugtechnik Staudt"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=6.7655%2C49.3156%2C6.7855%2C49.3296&layer=mapnik&marker=49.3226%2C6.7755"

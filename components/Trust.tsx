@@ -17,10 +17,15 @@ export default function Trust() {
           <div className="pointer-events-none absolute -right-32 -top-24 h-72 w-72 rounded-full bg-signal/20 blur-3xl" />
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
-              <p className="mb-4 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
-                <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-                Warum Staudt
-              </p>
+              <div className="mb-4 flex flex-wrap items-center gap-2">
+                <p className="inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
+                  <span className="h-1.5 w-1.5 rounded-full bg-signal" />
+                  Warum Staudt
+                </p>
+                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
+                  Sektion 03
+                </span>
+              </div>
               <h2 className="text-[clamp(1.9rem,3.6vw,3rem)] font-semibold leading-[1.05] tracking-tightest">
                 Ehrliches Handwerk.<br />
                 <span className="text-white/55">Ohne Zwischenrufer.</span>

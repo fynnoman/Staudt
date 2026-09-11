@@ -36,24 +36,6 @@ export default function HomePage() {
 
       <Trust />
 
-      <StickyScaleImage
-        image="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?auto=format&fit=crop&w=2400&q=80"
-        eyebrow="Reifenlagerung"
-        headline={
-          <>
-            Sichere Reifenlagerung.<br />
-            <span className="text-white/55">Rechtzeitig planen.</span>
-          </>
-        }
-        body={
-          <>
-            Großräumige, geschützte Flächen für Ihre gewechselten Räder. Sichern Sie
-            sich Ihren Termin für den Reifenwechsel rechtzeitig vor dem
-            Wintereinbruch.
-          </>
-        }
-      />
-
       <ProcessSteps />
 
       <WerkstattGallery />

@@ -73,7 +73,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 scale-[1.1] bg-[url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1800&q=70')] bg-cover bg-[center_35%] opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950/85 via-ink-950/80 to-ink-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_20%_10%,rgba(244,180,0,0.14),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_20%_10%,rgba(104,176,65,0.14),transparent_60%)]" />
         <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <span className="select-none text-[clamp(2rem,9vw,6rem)] font-bold uppercase tracking-[0.2em] text-white/15">
             Platzhalter
@@ -284,6 +284,12 @@ export default function Hero() {
                   <div className="relative aspect-[4/5] w-full overflow-hidden">
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=1600&q=90')] bg-cover bg-center" />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/10 to-transparent" />
+                    <div aria-hidden className="pointer-events-none absolute inset-0 z-10">
+                      <div className="absolute left-3 top-3 h-5 w-5 border-l-2 border-t-2 border-white/50" />
+                      <div className="absolute right-3 top-3 h-5 w-5 border-r-2 border-t-2 border-white/50" />
+                      <div className="absolute bottom-3 left-3 h-5 w-5 border-b-2 border-l-2 border-white/50" />
+                      <div className="absolute bottom-3 right-3 h-5 w-5 border-b-2 border-r-2 border-white/50" />
+                    </div>
                     <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
                       <span className="select-none text-[clamp(1.4rem,7vw,3.2rem)] font-bold uppercase tracking-[0.2em] text-white/25">
                         Platzhalter
@@ -361,23 +367,6 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              <motion.div
-                animate={{ y: [0, 6, 0] }}
-                transition={{
-                  duration: 4.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.5
-                }}
-                className="glass-strong absolute -right-6 bottom-24 hidden rounded-xl px-3 py-2 md:block"
-              >
-                <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">
-                  Nächster Slot
-                </div>
-                <div className="mt-0.5 spec-num text-[13px] font-medium text-white">
-                  Do · 08:30
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </div>

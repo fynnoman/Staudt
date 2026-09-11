@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const links = [
   { href: "/", label: "Werkstatt" },
   { href: "/portfolio", label: "Leistungen" },
+  { href: "/team", label: "Team" },
   { href: "/kontakt", label: "Kontakt" }
 ];
 
@@ -29,19 +31,15 @@ export default function Nav() {
         <div className="mx-auto mt-3 flex h-[60px] max-w-7xl items-center justify-between gap-3 px-4 md:h-[64px] md:gap-6 md:px-8">
           <div className="glass-strong flex h-full w-full items-center justify-between gap-2 rounded-2xl pl-3 pr-2 md:px-6">
             <Link href="/" className="group flex min-w-0 items-center gap-2.5 md:gap-3">
-              <span className="relative grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-signal text-black shadow-signal">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2.4}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M14 6l7 7-7 7" />
-                  <path d="M3 13h18" />
-                </svg>
+              <span className="relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-xl bg-black shadow-signal">
+                <Image
+                  src="/images/logo.png"
+                  alt="Fahrzeugtechnik Staudt Logo"
+                  width={36}
+                  height={36}
+                  className="h-full w-full object-contain p-1"
+                  priority
+                />
               </span>
               <span className="flex min-w-0 flex-col leading-none">
                 <span className="truncate text-[14px] font-semibold tracking-tight md:text-[15px]">
