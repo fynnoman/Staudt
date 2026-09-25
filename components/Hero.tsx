@@ -112,12 +112,12 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="balance text-[clamp(2.4rem,7.6vw,6.8rem)] font-semibold leading-[0.95] tracking-tightest text-white">
+          <h1 className="balance text-[clamp(2.2rem,7.6vw,6.8rem)] font-semibold leading-[1] tracking-tightest text-white md:leading-[0.95]">
             Werkstatt,
             <br />
             die{" "}
             <span className="relative inline-flex align-baseline">
-              <span className="relative inline-block min-w-[6.5ch] overflow-hidden pb-1 pr-1 text-left">
+              <span className="relative inline-block min-w-[5ch] overflow-hidden pb-1 pr-1 text-left sm:min-w-[6.5ch]">
                 <AnimatePresence mode="popLayout" initial={false}>
                   <motion.span
                     key={ROTATING[idx].word}
@@ -272,7 +272,7 @@ export default function Hero() {
 
         {/* RIGHT — image card + orbit stats */}
         <div className="col-span-12 md:col-span-5">
-          <div className="relative mx-auto max-w-[300px] md:mx-0 md:ml-auto md:max-w-md">
+          <div className="relative mx-auto max-w-[86vw] sm:max-w-[320px] md:mx-0 md:ml-auto md:max-w-md">
             {/* Vertical rail label */}
             <div className="pointer-events-none absolute -left-8 top-8 hidden origin-top-left rotate-90 text-[10px] uppercase tracking-[0.42em] text-white/35 md:block">
               Bühne · 03 · Live
@@ -391,7 +391,7 @@ export default function Hero() {
 
       {/* Bottom spec bar */}
       <div className="relative z-10 mx-auto max-w-7xl px-5 pb-8 md:px-8">
-        <div className="glass grid grid-cols-2 divide-x divide-y divide-white/8 overflow-hidden rounded-2xl md:grid-cols-4 md:divide-y-0">
+        <div className="glass grid grid-cols-1 divide-y divide-white/8 overflow-hidden rounded-2xl sm:grid-cols-2 sm:divide-x md:grid-cols-4 md:divide-y-0">
           {[
             { k: "6", l: "Kernleistungen", s: "aus einer Hand" },
             { k: "Do.", l: "TÜV vor Ort", s: "durch Dekra" },

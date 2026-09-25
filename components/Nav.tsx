@@ -107,7 +107,8 @@ export default function Nav() {
             className="absolute inset-0 bg-black/70 backdrop-blur-xl"
             onClick={() => setOpen(false)}
           />
-          <div className="glass-strong absolute inset-x-4 top-24 rounded-2xl p-5">
+          <div className="glass-strong absolute inset-x-4 top-24 max-h-[calc(100vh-8rem)] overflow-y-auto rounded-2xl p-5"
+            style={{ maxHeight: "calc(100dvh - 7rem - env(safe-area-inset-top))" }}>
             <div className="flex flex-col gap-1">
               {links.map((l) => (
                 <Link

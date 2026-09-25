@@ -47,7 +47,7 @@ export default function Trust() {
                   transition={{ duration: 0.55, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
                   className="rounded-2xl border border-white/8 bg-white/[0.03] p-4 md:p-5"
                 >
-                  <div className="spec-num text-2xl font-semibold text-white md:text-3xl">{s.n}</div>
+                  <div className="spec-num text-xl font-semibold text-white sm:text-2xl md:text-3xl">{s.n}</div>
                   <div className="mt-2 text-[13px] text-white/85">{s.l}</div>
                   <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">
                     {s.sub}

@@ -88,11 +88,11 @@ export default function KontaktPage() {
                 <div className="text-[11px] uppercase tracking-[0.22em] text-white/50">
                   Öffnungszeiten
                 </div>
-                <table className="mt-3 w-full text-[15px] text-white/85">
+                <table className="mt-3 w-full text-[13px] text-white/85 sm:text-[15px]">
                   <tbody>
                     <tr className="border-b border-white/6">
-                      <td className="py-2.5">Mo–Fr</td>
-                      <td className="py-2.5 text-right spec-num">
+                      <td className="py-2.5 pr-2">Mo–Fr</td>
+                      <td className="py-2.5 text-right spec-num whitespace-nowrap">
                         8:00–12:00 · 13:00–17:00
                       </td>
                     </tr>

@@ -60,7 +60,7 @@ export default function ProcessSteps() {
           </h2>
         </div>
 
-        <div className="relative grid gap-3 sm:grid-cols-2 md:grid-cols-4 md:gap-6">
+        <div className="relative grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:gap-6">
           {/* animated connector */}
           <div className="pointer-events-none absolute left-0 right-0 top-1/2 hidden h-px -translate-y-1/2 bg-white/8 md:block">
             <motion.div

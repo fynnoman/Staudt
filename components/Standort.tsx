@@ -66,11 +66,11 @@ export default function Standort() {
                 <div className="text-[11px] uppercase tracking-[0.22em] text-white/50">
                   Öffnungszeiten
                 </div>
-                <table className="mt-3 w-full text-[14.5px] text-white/85">
+                <table className="mt-3 w-full text-[13px] text-white/85 sm:text-[14.5px]">
                   <tbody>
                     <tr className="border-b border-white/6">
-                      <td className="py-2">Mo–Fr</td>
-                      <td className="py-2 text-right spec-num">8:00–12:00 · 13:00–17:00</td>
+                      <td className="py-2 pr-2">Mo–Fr</td>
+                      <td className="py-2 text-right spec-num whitespace-nowrap">8:00–12:00 · 13:00–17:00</td>
                     </tr>
                     <tr className="border-b border-white/6">
                       <td className="py-2">Samstag</td>
