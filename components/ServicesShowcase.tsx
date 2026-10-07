@@ -39,8 +39,7 @@ const services: Service[] = [
     copy:
       "Steinschlag in der Scheibe oder Riss? Sichern Sie sich schnell Ihren Termin. Wir tauschen Ihre Scheibe direkt aus, sodass Sie sicher weiterfahren können.",
     bullets: ["Autoglas-Spezialist Partner", "Scheibentausch", "Schnelle Termine"],
-    image:
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/leistungen/glasservice.png",
     focus: true,
     focusLabel: "Spezialisierung"
   },
@@ -50,8 +49,7 @@ const services: Service[] = [
     copy:
       "Rechtzeitig Termin für den Reifenwechsel vor Wintereinbruch. Großräumige, geschützte Flächen für die Lagerung Ihrer gewechselten Reifen.",
     bullets: ["Reifenwechsel", "Sichere Lagerung", "Vor Wintereinbruch"],
-    image:
-      "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?auto=format&fit=crop&w=1600&q=80"
+    image: "/images/leistungen/reifenwechsel-lagerung.png"
   },
   {
     no: "05",
@@ -68,8 +66,7 @@ const services: Service[] = [
     copy:
       "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel. MOTUL Öl-Station.",
     bullets: ["Regelmäßiger Wechsel", "MOTUL Öl-Station", "Langer Motorlauf"],
-    image:
-      "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&w=1600&q=80"
+    image: "/images/leistungen/oelwechsel.png"
   },
   {
     no: "07",

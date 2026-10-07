@@ -85,9 +85,8 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
   glasservice: {
     slug: "glasservice",
     title: "Glasservice",
-    heroImage:
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1600&q=80",
-    heroImageAlt: "Autoglas-Service in der Kfz-Werkstatt",
+    heroImage: "/images/leistungen/glasservice.png",
+    heroImageAlt: "Autoglas-Reparatur in der Meisterwerkstatt",
     lead:
       "Steinschlag in der Scheibe oder Riss? Sichern Sie sich schnell einen Termin. Wir tauschen Ihre Scheibe direkt und sauber aus, sodass Sie sicher weiterfahren können.",
     intro: [
@@ -117,9 +116,8 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
   "reifenwechsel-lagerung": {
     slug: "reifenwechsel-lagerung",
     title: "Reifenwechsel & Lagerung",
-    heroImage:
-      "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?auto=format&fit=crop&w=1600&q=80",
-    heroImageAlt: "Reifen und Felgen in der Werkstatt",
+    heroImage: "/images/leistungen/reifenwechsel-lagerung.png",
+    heroImageAlt: "Reifenservice in der Meisterwerkstatt",
     lead:
       "Rechtzeitig den Termin für den Reifenwechsel sichern — besonders vor Wintereinbruch. Wir wechseln Ihre Räder und lagern die gewechselten Reifen auf großräumigen, geschützten Flächen bei uns ein.",
     intro: [
@@ -187,9 +185,8 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
   oelwechsel: {
     slug: "oelwechsel",
     title: "Ölwechsel",
-    heroImage:
-      "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&w=1600&q=80",
-    heroImageAlt: "Ölwechsel in der Kfz-Werkstatt",
+    heroImage: "/images/leistungen/oelwechsel.png",
+    heroImageAlt: "Ölwechsel in der Meisterwerkstatt",
     lead:
       "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel.",
     intro: [
