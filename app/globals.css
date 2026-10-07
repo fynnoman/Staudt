@@ -7,7 +7,8 @@
   --bg-elev: #2c2e31;
   --fg: #f1f2f4;
   --muted: #9aa0aa;
-  --signal: #f4b400;
+  --signal: #68B041;
+  --signal-rgb: 104, 176, 65;
   --line: rgba(255, 255, 255, 0.09);
   --font-display: "Inter", ui-sans-serif, system-ui;
   --font-body: "Inter", ui-sans-serif, system-ui;
@@ -33,7 +34,7 @@ body {
 /* Below-fold sections skip paint/layout until near-viewport */
 section {
   content-visibility: auto;
-  contain-intrinsic-size: 800px;
+  contain-intrinsic-size: auto 800px;
 }
 
 /* Prevent iOS zoom-on-focus on form inputs (needs >= 16px) */
@@ -51,7 +52,7 @@ a {
 }
 
 ::selection {
-  background: rgba(244, 180, 0, 0.35);
+  background: rgba(104, 176, 65, 0.35);
   color: #fff;
 }
 
@@ -116,7 +117,7 @@ a {
 .stripe-caution {
   background-image: repeating-linear-gradient(
     45deg,
-    #f4b400 0 14px,
+    #68B041 0 14px,
     #0a0a0b 14px 28px
   );
 }
@@ -156,7 +157,7 @@ a {
   position: absolute;
   width: 16px;
   height: 16px;
-  border-color: rgba(244, 180, 0, 0.8);
+  border-color: rgba(104, 176, 65, 0.8);
 }
 .corner-mark::before {
   top: -1px;

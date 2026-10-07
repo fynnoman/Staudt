@@ -29,7 +29,7 @@ const steps = [
     no: "04",
     title: "Sauber ausgeführt",
     body:
-      "Reparatur mit Herstellervorgabe und Original- oder gleichwertigen Teilen. Übergabe inklusive Protokoll.",
+      "Reparatur nach Herstellervorgabe. Saubere Übergabe, Sie fahren sicher weiter.",
     kbd: "done"
   }
 ];

@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import Standort from "@/components/Standort";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Kontakt · Fahrzeugtechnik Staudt Saarlouis",
+  title: "Kontakt",
   description:
-    "Termin, Rückruf oder Beratung: Kontaktieren Sie die Meisterwerkstatt Staudt in Saarlouis. Kohlbrunnenstraße 20, 66740 Saarlouis."
+    "Termin, Rückruf oder Beratung: Kontaktieren Sie die Fahrzeugtechnik Staudt in Saarlouis. Kohlbrunnenstraße 20, 66740 Saarlouis. Telefon 06831 9618905.",
+  alternates: { canonical: "/kontakt" }
 };
 
 export default function KontaktPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Werkstatt", url: "/" },
+          { name: "Kontakt", url: "/kontakt" }
+        ]}
+      />
+
       <section className="relative pb-6 pt-28 md:pb-8 md:pt-56">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">

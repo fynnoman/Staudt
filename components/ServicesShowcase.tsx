@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 type Service = {
   no: string;
@@ -18,13 +19,8 @@ const services: Service[] = [
     no: "01",
     title: "Inspektion",
     copy:
-      "Neu-, Jahres- oder Gebrauchtwagen: die Inspektion nach Herstellervorgabe hält Ihr Auto sicher und werterhaltend im Betrieb.",
-    bullets: [
-      "Herstellervorgabe",
-      "Herstellergarantie bleibt erhalten",
-      "Digitales Prüfprotokoll",
-      "Termingerecht"
-    ],
+      "Neu-, Jahres- oder Gebrauchtwagen: die Inspektion nach Herstellervorgabe hält Ihr Auto im sicheren Betrieb und schützt Sie wie andere Verkehrsteilnehmer.",
+    bullets: ["Nach Herstellervorgabe", "Regelmäßige Service-Termine", "Werterhaltender Betrieb"],
     image:
       "https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=1600&q=80"
   },
@@ -32,8 +28,8 @@ const services: Service[] = [
     no: "02",
     title: "HU · AU",
     copy:
-      "Hauptuntersuchung nach § 29 StVZO, inklusive Abgasuntersuchung. Wir bereiten Ihr Fahrzeug vor, TÜV donnerstags durch Dekra vor Ort.",
-    bullets: ["§ 29 StVZO", "TÜV Do. vor Ort", "AU inklusive"],
+      "Hauptuntersuchung nach § 29 StVZO, Abgasuntersuchung ist fester Bestandteil. Wir bereiten Ihr Fahrzeug vor, TÜV donnerstags durch Dekra vor Ort.",
+    bullets: ["§ 29 StVZO", "TÜV Do. durch Dekra", "AU fester HU-Teil"],
     image:
       "https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1600&q=80"
   },
@@ -41,13 +37,8 @@ const services: Service[] = [
     no: "03",
     title: "Glasservice",
     copy:
-      "Autoglas-Spezialist mit direkter Partnerschaft zu den führenden Herstellern. Steinschlag, Riss oder Kompletttausch: schnell, sauber und mit Direktabrechnung über Ihre Versicherung.",
-    bullets: [
-      "Autoglas Spezialist Partner",
-      "Steinschlagreparatur",
-      "Kompletttausch",
-      "Direktabrechnung Versicherung"
-    ],
+      "Steinschlag in der Scheibe oder Riss? Sichern Sie sich schnell Ihren Termin. Wir tauschen Ihre Scheibe direkt aus, sodass Sie sicher weiterfahren können.",
+    bullets: ["Autoglas-Spezialist Partner", "Scheibentausch", "Schnelle Termine"],
     image:
       "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1600&q=80",
     focus: true,
@@ -55,10 +46,10 @@ const services: Service[] = [
   },
   {
     no: "04",
-    title: "Reifenservice & Lagerung",
+    title: "Reifenwechsel & Lagerung",
     copy:
-      "Reifenwechsel vor Wintereinbruch, dazu großräumige, geschützte Flächen für die Einlagerung Ihrer Räder. Alles inklusive.",
-    bullets: ["Wechseln & Wuchten", "Sichere Lagerung", "Saisonservice"],
+      "Rechtzeitig Termin für den Reifenwechsel vor Wintereinbruch. Großräumige, geschützte Flächen für die Lagerung Ihrer gewechselten Reifen.",
+    bullets: ["Reifenwechsel", "Sichere Lagerung", "Vor Wintereinbruch"],
     image:
       "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?auto=format&fit=crop&w=1600&q=80"
   },
@@ -66,7 +57,7 @@ const services: Service[] = [
     no: "05",
     title: "KFZ-Service",
     copy:
-      "Bremsen und Bremsflüssigkeit, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles.",
+      "Umfassender KFZ-Service: Bremsen und Bremsflüssigkeit, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles.",
     bullets: ["Bremse & Fahrwerk", "Motor & Getriebe", "Klimaanlage"],
     image:
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80"
@@ -75,52 +66,10 @@ const services: Service[] = [
     no: "06",
     title: "Ölwechsel",
     copy:
-      "Damit Ihr Motor lange läuft und wenig verbraucht: sauberer, dokumentierter Ölwechsel nach Fahrzeugvorgabe.",
-    bullets: ["Passendes Öl", "Filterwechsel", "Digital dokumentiert"],
+      "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel.",
+    bullets: ["Regelmäßiger Wechsel", "Niedriger Verbrauch", "Langer Motorlauf"],
     image:
       "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&w=1600&q=80"
-  },
-  {
-    no: "07",
-    title: "Unfallinstandsetzung",
-    copy:
-      "Nach dem Unfall zurück auf die Straße: fachgerecht instand gesetzt, mit sauberer Dokumentation für die Versicherung und ehrlicher Beratung, was wirklich nötig ist.",
-    bullets: [
-      "Karosserie- & Blecharbeiten",
-      "Achsvermessung",
-      "Gutachten & Versicherung",
-      "Ersatzteile in OE-Qualität"
-    ],
-    image:
-      "https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?auto=format&fit=crop&w=1600&q=80"
-  },
-  {
-    no: "08",
-    title: "Motor- & Getriebe­instandsetzung",
-    copy:
-      "Große Reparaturen statt teurem Neukauf: Motoren und Getriebe setzen wir fachgerecht instand, vom Zahnriemenschaden bis zur Kupplung, mit klarer Kostenaufstellung vorab.",
-    bullets: [
-      "Motor-Instandsetzung",
-      "Getriebe-Instandsetzung",
-      "Kupplung & Zahnriemen",
-      "Kostenvoranschlag vorab"
-    ],
-    image:
-      "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1600&q=80"
-  },
-  {
-    no: "09",
-    title: "Hebebühnen bis 6,5 t · auch Wohnmobile",
-    copy:
-      "Zwei starke Bühnen mit 5,5 t und 6,5 t Tragkraft. Dadurch reparieren wir nicht nur PKW und Transporter, sondern auch Wohnmobile in Werkstattqualität.",
-    bullets: [
-      "Bühne 5,5 t · PKW & Transporter",
-      "Bühne 6,5 t · Wohnmobile",
-      "Wartung, Bremsen, Fahrwerk",
-      "Termine für Camping-Saison"
-    ],
-    image:
-      "https://images.unsplash.com/photo-1600661653561-629509216228?auto=format&fit=crop&w=1600&q=80"
   }
 ];
 
@@ -142,16 +91,14 @@ function ServiceCard({ s, index }: { s: Service; index: number }) {
       >
         <div className="glass overflow-hidden rounded-3xl">
           <div className="relative aspect-[16/11] w-full overflow-hidden">
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('${s.image}')` }}
+            <Image
+              src={s.image}
+              alt={s.title}
+              fill
+              sizes="(min-width: 768px) 55vw, 100vw"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-            <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
-              <span className="select-none text-[clamp(1.6rem,7vw,4rem)] font-bold uppercase tracking-[0.2em] text-white/25">
-                Platzhalter
-              </span>
-            </div>
             <div
               aria-hidden
               className="pointer-events-none absolute left-6 top-5 select-none font-mono text-[clamp(4rem,10vw,7rem)] font-semibold leading-none tracking-tightest text-white/[0.07]"
@@ -261,9 +208,8 @@ export default function ServicesShowcase() {
             </h2>
           </div>
           <p className="max-w-md text-[16px] leading-relaxed text-white/60">
-            Sechs Kernleistungen, ein Betrieb. Vom kleinen Ölwechsel bis zur
-            HU-Vorbereitung: klar dokumentiert, ehrlich beraten, sauber
-            ausgeführt.
+            Sechs Kernleistungen, ein Betrieb. Vom Ölwechsel bis zur
+            HU-Vorbereitung: Meisterhand, ehrlich beraten, sauber ausgeführt.
           </p>
         </div>
 

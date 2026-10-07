@@ -63,7 +63,7 @@ export default function ContactForm() {
             type="tel"
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            placeholder="0681 …"
+            placeholder="06831 …"
             className={field}
           />
         </label>

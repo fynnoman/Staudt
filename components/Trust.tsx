@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { n: "Meister", l: "geführter Betrieb", sub: "Handwerkskammer" },
+  { n: "Meister", l: "geführter Betrieb", sub: "Die Meisterwerkstatt" },
   { n: "Do.", l: "TÜV vor Ort", sub: "Dekra Prüfstelle" },
   { n: "6", l: "Kernleistungen", sub: "Aus einer Hand" },
-  { n: "0€", l: "Diagnose-Überraschung", sub: "Nur nach Freigabe" }
+  { n: "AU", l: "fester HU-Teil", sub: "Abgasuntersuchung inkl." }
 ];
 
 export default function Trust() {

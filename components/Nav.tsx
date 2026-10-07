@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "/", label: "Werkstatt" },
   { href: "/portfolio", label: "Leistungen" },
-  { href: "/team", label: "Team" },
   { href: "/kontakt", label: "Kontakt" }
 ];
 

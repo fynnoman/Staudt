@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -19,13 +20,17 @@ export default function ContactCTA() {
         style={{ y, scale }}
         className="absolute inset-0 -z-10"
       >
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=2400&q=80')] bg-cover bg-center opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-950/60 to-ink-950" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <span className="select-none text-[clamp(2rem,9vw,6rem)] font-bold uppercase tracking-[0.2em] text-white/20">
-            Platzhalter
-          </span>
+        <div className="absolute inset-0 opacity-60">
+          <Image
+            src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=2400&q=80"
+            alt=""
+            aria-hidden
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-950/60 to-ink-950" />
       </motion.div>
 
       <div className="mx-auto max-w-4xl px-5 text-center md:px-8">

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
   description:
-    "Datenschutzerklärung der Fahrzeugtechnik Staudt · Die Meisterwerkstatt in Saarlouis."
+    "Datenschutzerklärung der Fahrzeugtechnik Staudt · Die Meisterwerkstatt in Saarlouis.",
+  alternates: { canonical: "/datenschutz" }
 };
 
 const sections = [
@@ -51,12 +53,14 @@ const sections = [
           b) Bei Nutzung unseres Kontaktformulars
         </p>
         <p className="mt-2">
-          Für Anfragen bieten wir ein Kontaktformular. Die Angabe einer
-          gültigen E-Mail-Adresse ist erforderlich, damit wir Ihre Anfrage
-          beantworten können. Weitere Angaben sind freiwillig. Die
-          Verarbeitung erfolgt auf Basis Ihrer Einwilligung nach Art. 6 Abs.
-          1 S. 1 lit. a DSGVO. Die Daten werden nach Erledigung Ihrer
-          Anfrage automatisch gelöscht.
+          Für Anfragen bieten wir ein Kontaktformular. Die Eingaben werden
+          nicht auf unseren Servern gespeichert, sondern direkt an Ihr
+          E-Mail-Programm übergeben, über das Sie die Nachricht an uns
+          versenden. Weitere Angaben sind freiwillig. Die anschließende
+          Verarbeitung Ihrer Anfrage in unserem E-Mail-Postfach erfolgt
+          auf Basis Ihrer Einwilligung nach Art. 6 Abs. 1 S. 1 lit. a
+          DSGVO. Nach abschließender Klärung werden die Daten gelöscht,
+          sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
         </p>
         <p className="mt-3 font-medium text-white/90">c) Kontaktaufnahme</p>
         <p className="mt-2">
@@ -162,7 +166,7 @@ const sections = [
     title: "Aktualität und Änderung",
     body: (
       <p>
-        Diese Datenschutzerklärung hat den Stand September 2026. Durch die
+        Diese Datenschutzerklärung hat den Stand Oktober 2026. Durch die
         Weiterentwicklung der Website oder aufgrund geänderter gesetzlicher
         Vorgaben kann es notwendig werden, diese Erklärung anzupassen.
       </p>
@@ -172,7 +176,14 @@ const sections = [
 
 export default function DatenschutzPage() {
   return (
-    <section className="relative pt-28 md:pt-56">
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Werkstatt", url: "/" },
+          { name: "Datenschutz", url: "/datenschutz" }
+        ]}
+      />
+      <section className="relative pt-28 md:pt-56">
       <div className="mx-auto max-w-3xl px-5 pb-16 md:px-8 md:pb-24">
         <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
           <span className="h-1.5 w-1.5 rounded-full bg-signal" />
@@ -204,5 +215,6 @@ export default function DatenschutzPage() {
         </div>
       </div>
     </section>
+    </>
   );
 }

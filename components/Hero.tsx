@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
   AnimatePresence,
@@ -71,14 +72,19 @@ export default function Hero() {
         style={{ y: bgY }}
         className="absolute inset-0 -z-10 will-change-transform"
       >
-        <div className="absolute inset-0 scale-[1.1] bg-[url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1800&q=70')] bg-cover bg-[center_35%] opacity-40" />
+        <div className="absolute inset-0 scale-[1.1]">
+          <Image
+            src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1800&q=70"
+            alt=""
+            aria-hidden
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[center_35%] opacity-40"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950/85 via-ink-950/80 to-ink-950" />
         <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_20%_10%,rgba(104,176,65,0.14),transparent_60%)]" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <span className="select-none text-[clamp(2rem,9vw,6rem)] font-bold uppercase tracking-[0.2em] text-white/15">
-            Platzhalter
-          </span>
-        </div>
       </motion.div>
 
       {/* Grid overlay */}
@@ -275,7 +281,7 @@ export default function Hero() {
           <div className="relative mx-auto max-w-[86vw] sm:max-w-[320px] md:mx-0 md:ml-auto md:max-w-md">
             {/* Vertical rail label */}
             <div className="pointer-events-none absolute -left-8 top-8 hidden origin-top-left rotate-90 text-[10px] uppercase tracking-[0.42em] text-white/35 md:block">
-              Bühne · 03 · Live
+              Werkstatt · Saarlouis
             </div>
 
             {/* Depth: soft signal glow behind card */}
@@ -299,7 +305,14 @@ export default function Hero() {
               <div className="corner-mark relative">
                 <div className="glass overflow-hidden rounded-3xl">
                   <div className="relative aspect-[4/5] w-full overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=1600&q=90')] bg-cover bg-center" />
+                    <Image
+                      src="https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=1600&q=90"
+                      alt="Fahrzeug auf der Hebebühne in der Meisterwerkstatt"
+                      fill
+                      priority
+                      sizes="(min-width: 768px) 420px, 86vw"
+                      className="object-cover"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/10 to-transparent" />
                     <div aria-hidden className="pointer-events-none absolute inset-0 z-10">
                       <div className="absolute left-3 top-3 h-5 w-5 border-l-2 border-t-2 border-white/50" />
@@ -307,18 +320,13 @@ export default function Hero() {
                       <div className="absolute bottom-3 left-3 h-5 w-5 border-b-2 border-l-2 border-white/50" />
                       <div className="absolute bottom-3 right-3 h-5 w-5 border-b-2 border-r-2 border-white/50" />
                     </div>
-                    <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                      <span className="select-none text-[clamp(1.4rem,7vw,3.2rem)] font-bold uppercase tracking-[0.2em] text-white/25">
-                        Platzhalter
-                      </span>
-                    </div>
                     <div className="absolute inset-x-5 top-5 flex items-center justify-between">
                       <span className="glass-chip inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] uppercase tracking-[0.22em] text-white/85">
                         <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-                        Bühne 03
+                        Werkstatt
                       </span>
                       <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/60">
-                        № 01
+                        Live
                       </span>
                     </div>
                     <div className="absolute inset-x-5 bottom-5">
@@ -341,8 +349,8 @@ export default function Hero() {
                         />
                       </div>
                       <div className="mt-2 flex items-center justify-between text-[10px] uppercase tracking-[0.22em] text-white/45">
-                        <span>Prüfschritt 09/11</span>
-                        <span className="spec-num text-white/75">82%</span>
+                        <span>Prüfbereit</span>
+                        <span className="text-white/75">TÜV · Do.</span>
                       </div>
                     </div>
                   </div>
@@ -375,10 +383,10 @@ export default function Hero() {
                   </span>
                   <div className="leading-tight">
                     <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">
-                      Meister
+                      Betrieb
                     </div>
                     <div className="text-[12px] font-medium text-white">
-                      Handwerkskammer
+                      Meisterwerkstatt
                     </div>
                   </div>
                 </div>
@@ -396,7 +404,7 @@ export default function Hero() {
             { k: "6", l: "Kernleistungen", s: "aus einer Hand" },
             { k: "Do.", l: "TÜV vor Ort", s: "durch Dekra" },
             { k: "1×1", l: "Meisterbetrieb", s: "geführt" },
-            { k: "0€", l: "Diagnose", s: "nur nach Freigabe" }
+            { k: "AU", l: "fester HU-Teil", s: "Abgasuntersuchung" }
           ].map((s) => (
             <div key={s.l} className="flex flex-col gap-1 px-4 py-3.5 md:px-5 md:py-4">
               <div className="spec-num text-xl font-semibold text-white md:text-2xl">

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const shots = [
   {
@@ -68,16 +69,14 @@ export default function WerkstattGallery() {
                   : "aspect-square md:aspect-[4/3]"
               }`}
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
-                style={{ backgroundImage: `url('${s.src}')` }}
+              <Image
+                src={s.src}
+                alt={s.caption}
+                fill
+                sizes="(min-width: 768px) 33vw, 50vw"
+                className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-              <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <span className="select-none text-[clamp(1.2rem,5.5vw,2.6rem)] font-bold uppercase tracking-[0.2em] text-white/25">
-                  Platzhalter
-                </span>
-              </div>
               <div className="absolute inset-x-5 bottom-4 flex items-center justify-between">
                 <span className="text-[13px] text-white/90">{s.caption}</span>
                 <span className="glass-chip rounded-full px-2.5 py-1 text-[10px] uppercase tracking-[0.22em] text-white/80">

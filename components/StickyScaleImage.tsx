@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ReactNode, useRef } from "react";
 
@@ -32,22 +33,26 @@ export default function StickyScaleImage({
   const textY = useTransform(scrollYProgress, [0.25, 0.6], [30, 0]);
 
   return (
-    <section ref={ref} className="relative h-[115vh] w-full md:h-[130vh]">
+    <section ref={ref} className="relative h-[115svh] w-full md:h-[130svh]">
       <div className="sticky top-0 flex h-[100svh] w-full items-center justify-center overflow-hidden">
         <motion.div
-          style={{ scale, backgroundImage: `url('${image}')` }}
-          className="absolute inset-0 bg-cover bg-center will-change-transform"
-        />
+          style={{ scale }}
+          className="absolute inset-0 will-change-transform"
+        >
+          <Image
+            src={image}
+            alt=""
+            aria-hidden
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </motion.div>
         <motion.div
           style={{ opacity: overlay }}
           className="absolute inset-0 bg-ink-950"
         />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent via-ink-950/50 to-ink-950" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <span className="select-none text-[clamp(2.5rem,11vw,8rem)] font-bold uppercase tracking-[0.2em] text-white/20">
-            Platzhalter
-          </span>
-        </div>
 
         <motion.div
           style={{ opacity: textOpacity, y: textY }}

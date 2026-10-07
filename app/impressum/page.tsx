@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum der Fahrzeugtechnik Staudt · Die Meisterwerkstatt in Saarlouis."
+    "Impressum der Fahrzeugtechnik Staudt · Die Meisterwerkstatt in Saarlouis.",
+  alternates: { canonical: "/impressum" }
 };
 
 export default function ImpressumPage() {
   return (
-    <section className="relative pt-28 md:pt-56">
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Werkstatt", url: "/" },
+          { name: "Impressum", url: "/impressum" }
+        ]}
+      />
+      <section className="relative pt-28 md:pt-56">
       <div className="mx-auto max-w-3xl px-5 pb-16 md:px-8 md:pb-24">
         <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
           <span className="h-1.5 w-1.5 rounded-full bg-signal" />
@@ -79,5 +88,6 @@ export default function ImpressumPage() {
         </div>
       </div>
     </section>
+    </>
   );
 }
