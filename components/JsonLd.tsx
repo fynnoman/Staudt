@@ -108,9 +108,7 @@ export function BusinessJsonLd({ sameAs = [] as string[] }: { sameAs?: string[] 
       latitude: BUSINESS.latitude,
       longitude: BUSINESS.longitude
     },
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-      `${BUSINESS.street}, ${BUSINESS.postalCode} ${BUSINESS.city}`
-    )}`,
+    hasMap: "https://maps.app.goo.gl/y6GiJg1HSyMW4H8X9",
     openingHoursSpecification: openingHours,
     specialOpeningHoursSpecification: specialHours,
     founder: {

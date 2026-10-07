@@ -76,9 +76,9 @@ export default function ImpressumPage() {
 
           <div>
             <div className="text-[11px] uppercase tracking-[0.22em] text-white/50">
-              Inhaltlich Verantwortlicher gem. § 55 II RStV
+              Inhaltlich Verantwortliche gem. § 55 II RStV
             </div>
-            <p className="mt-2">Eric Staudt (Anschrift siehe oben)</p>
+            <p className="mt-2">Eric Staudt (Anschrift s.o.)</p>
           </div>
 
           <div>

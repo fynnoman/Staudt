@@ -71,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="de" className={inter.variable}>
       <body className="min-h-screen bg-ink-950 text-white antialiased">
-        <BusinessJsonLd sameAs={["https://share.google/CpZQKZfrVUtYwIeUi"]} />
+        <BusinessJsonLd sameAs={["https://maps.app.goo.gl/y6GiJg1HSyMW4H8X9"]} />
         <WebSiteJsonLd />
         <MotionProvider>
           <div className="fixed inset-0 -z-10 bg-radial-glow" />
