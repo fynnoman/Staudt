@@ -9,6 +9,7 @@ import {
   useScroll,
   useTransform
 } from "framer-motion";
+import { useNowSaarlouis, isOpen } from "@/lib/hours";
 
 const ROTATING = [
   { word: "liefert.", tone: "text-signal" },
@@ -17,28 +18,6 @@ const ROTATING = [
   { word: "wechselt.", tone: "text-signal" },
   { word: "berät.", tone: "text-signal" }
 ];
-
-function useNowSaarlouis() {
-  const [now, setNow] = useState<Date | null>(null);
-  useEffect(() => {
-    setNow(new Date());
-    const t = setInterval(() => setNow(new Date()), 30_000);
-    return () => clearInterval(t);
-  }, []);
-  return now;
-}
-
-function isOpen(d: Date) {
-  const day = d.getDay(); // 0 Su .. 6 Sa
-  const h = d.getHours();
-  const m = d.getMinutes();
-  const t = h * 60 + m;
-  if (day === 0) return false;
-  if (day >= 1 && day <= 5) {
-    return (t >= 480 && t < 720) || (t >= 780 && t < 1020); // 08–12, 13–17
-  }
-  return false; // Sa nur nach Vereinbarung
-}
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -152,10 +131,12 @@ export default function Hero() {
 
           {/* Slogan signature */}
           <div className="mt-8 flex items-center gap-5">
-            <img
+            <Image
               src="/images/slogan-mir-schaffe-du-faehrscht.png"
               alt="Mir schaffe, du fährscht!"
-              className="h-20 w-auto shrink-0 mix-blend-screen opacity-95 md:h-24"
+              width={96}
+              height={96}
+              className="h-20 w-20 shrink-0 mix-blend-screen opacity-95 md:h-24 md:w-24"
             />
             <div className="hidden min-w-0 sm:block">
               <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">

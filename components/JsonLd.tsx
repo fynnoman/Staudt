@@ -18,6 +18,30 @@ const openingHours = [
   }
 ];
 
+const germanHolidays2026 = [
+  "2026-01-01", // Neujahr
+  "2026-04-03", // Karfreitag
+  "2026-04-06", // Ostermontag
+  "2026-05-01", // Tag der Arbeit
+  "2026-05-14", // Christi Himmelfahrt
+  "2026-05-25", // Pfingstmontag
+  "2026-06-04", // Fronleichnam
+  "2026-10-03", // Tag der Deutschen Einheit
+  "2026-11-01", // Allerheiligen
+  "2026-12-24", // Heiligabend
+  "2026-12-25", // 1. Weihnachtstag
+  "2026-12-26", // 2. Weihnachtstag
+  "2026-12-31"  // Silvester
+];
+
+const specialHours = germanHolidays2026.map((d) => ({
+  "@type": "OpeningHoursSpecification",
+  validFrom: d,
+  validThrough: d,
+  opens: "00:00",
+  closes: "00:00"
+}));
+
 const address = {
   "@type": "PostalAddress",
   streetAddress: BUSINESS.street,
@@ -26,6 +50,17 @@ const address = {
   addressRegion: BUSINESS.region,
   addressCountry: BUSINESS.country
 };
+
+const areaServed = [
+  { "@type": "City", name: "Saarlouis" },
+  { "@type": "City", name: "Dillingen (Saar)" },
+  { "@type": "City", name: "Wallerfangen" },
+  { "@type": "City", name: "Saarwellingen" },
+  { "@type": "City", name: "Rehlingen-Siersburg" },
+  { "@type": "City", name: "Bous" },
+  { "@type": "City", name: "Lebach" },
+  { "@type": "AdministrativeArea", name: "Landkreis Saarlouis" }
+];
 
 export function BusinessJsonLd({ sameAs = [] as string[] }: { sameAs?: string[] }) {
   const reviewObjects = REVIEWS.map((r) => ({
@@ -39,8 +74,7 @@ export function BusinessJsonLd({ sameAs = [] as string[] }: { sameAs?: string[] 
       ratingValue: r.rating,
       bestRating: 5,
       worstRating: 1
-    },
-    publisher: { "@type": "Organization", name: r.source }
+    }
   }));
 
   const ratings = REVIEWS.map((r) => r.rating);
@@ -48,36 +82,50 @@ export function BusinessJsonLd({ sameAs = [] as string[] }: { sameAs?: string[] 
 
   const data = {
     "@context": "https://schema.org",
-    "@type": "AutoRepair",
+    "@type": ["AutoRepair", "MotorcycleRepair"],
     "@id": BUSINESS_ID,
     name: BUSINESS.shortName,
     legalName: BUSINESS.legalName,
     alternateName: ["Die Meisterwerkstatt Staudt", "Meisterwerkstatt Staudt"],
     description:
-      "Kfz-Meisterwerkstatt in Saarlouis für Inspektion, HU/AU, Glasservice, Reifenwechsel und -lagerung, KFZ-Service und Ölwechsel.",
+      "Kfz-Meisterwerkstatt in Saarlouis für Inspektion, HU/AU, Glasservice, Reifenwechsel und -lagerung, KFZ-Service, Ölwechsel und Motorrad-Service. Dekra-Prüfstelle, MOTUL Öl-Station.",
     url: SITE_URL,
     image: BUSINESS.logo,
-    logo: BUSINESS.logo,
+    logo: {
+      "@type": "ImageObject",
+      url: BUSINESS.logo,
+      width: 600,
+      height: 600
+    },
     telephone: BUSINESS.phone,
     faxNumber: BUSINESS.fax,
     email: BUSINESS.email,
+    priceRange: "€€",
+    currenciesAccepted: "EUR",
     address,
     geo: {
       "@type": "GeoCoordinates",
       latitude: BUSINESS.latitude,
       longitude: BUSINESS.longitude
     },
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${BUSINESS.street}, ${BUSINESS.postalCode} ${BUSINESS.city}`
+    )}`,
     openingHoursSpecification: openingHours,
+    specialOpeningHoursSpecification: specialHours,
     founder: {
       "@type": "Person",
       name: BUSINESS.owner,
       jobTitle: "Kfz-Meister · Inhaber"
     },
-    areaServed: [
-      { "@type": "City", name: "Saarlouis" },
-      { "@type": "AdministrativeArea", name: "Landkreis Saarlouis" },
-      { "@type": "State", name: "Saarland" }
+    employee: [
+      {
+        "@type": "Person",
+        name: BUSINESS.owner,
+        jobTitle: "Kfz-Meister · Inhaber"
+      }
     ],
+    areaServed,
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Kfz-Leistungen",
@@ -94,7 +142,7 @@ export function BusinessJsonLd({ sameAs = [] as string[] }: { sameAs?: string[] 
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: avg.toFixed(1),
+      ratingValue: Number(avg.toFixed(1)),
       bestRating: 5,
       worstRating: 1,
       reviewCount: REVIEWS.length,
@@ -168,13 +216,11 @@ export function ServiceJsonLd({
     "@id": `${SITE_URL}/leistungen/${slug}#service`,
     name,
     description,
-    serviceType: name,
     url: `${SITE_URL}/leistungen/${slug}`,
     provider: { "@id": BUSINESS_ID },
-    areaServed: [
-      { "@type": "City", name: "Saarlouis" },
-      { "@type": "AdministrativeArea", name: "Landkreis Saarlouis" }
-    ]
+    availableAtOrFrom: { "@id": BUSINESS_ID },
+    hoursAvailable: openingHours,
+    areaServed
   };
   return (
     <script

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-type State = "idle" | "sending" | "sent";
+type State = "idle" | "sending" | "sent" | "failed";
 
 export default function ContactForm() {
   const [state, setState] = useState<State>("idle");
@@ -18,15 +18,23 @@ export default function ContactForm() {
     e.preventDefault();
     if (!form.email || !form.message) return;
     setState("sending");
-    // Fallback: open mail client. No storage, no external services.
     const body = encodeURIComponent(
       `Name: ${form.name}\nTelefon: ${form.phone}\n\n${form.message}`
     );
     const subject = encodeURIComponent(
       `Terminanfrage · ${form.name || "Website"}`
     );
+    const sentAt = Date.now();
     window.location.href = `mailto:info@fzgtechstaudt.de?subject=${subject}&body=${body}`;
-    setTimeout(() => setState("sent"), 400);
+
+    // If no mail client is configured, the window stays visible — detect that.
+    setTimeout(() => {
+      if (document.visibilityState === "visible" && Date.now() - sentAt < 2500) {
+        setState("failed");
+      } else {
+        setState("sent");
+      }
+    }, 1800);
   }
 
   const field =
@@ -114,6 +122,31 @@ export default function ContactForm() {
           </svg>
         </button>
       </div>
+
+      {state === "failed" && (
+        <div className="mt-5 rounded-xl border border-signal/30 bg-signal/5 p-4 text-[14px] leading-relaxed text-white/85">
+          <p className="font-medium text-white">
+            Ihr E-Mail-Programm hat sich nicht geöffnet.
+          </p>
+          <p className="mt-1 text-white/70">
+            Rufen Sie uns direkt an — wir sind während der Öffnungszeiten für Sie da.
+          </p>
+          <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+            <a
+              href="tel:+4968319618905"
+              className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-signal px-4 py-2 text-[14px] font-semibold text-black"
+            >
+              06831 9618905
+            </a>
+            <a
+              href="mailto:info@fzgtechstaudt.de"
+              className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg border border-white/12 bg-white/[0.03] px-4 py-2 text-[14px] text-white/90"
+            >
+              info@fzgtechstaudt.de kopieren
+            </a>
+          </div>
+        </div>
+      )}
     </motion.form>
   );
 }

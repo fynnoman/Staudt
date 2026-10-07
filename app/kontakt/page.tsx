@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: "Kontakt",
   description:
     "Termin, Rückruf oder Beratung: Kontaktieren Sie die Fahrzeugtechnik Staudt in Saarlouis. Kohlbrunnenstraße 20, 66740 Saarlouis. Telefon 06831 9618905.",
-  alternates: { canonical: "/kontakt" }
+  alternates: {
+    canonical: "/kontakt",
+    languages: { "de-DE": "/kontakt" }
+  }
 };
 
 export default function KontaktPage() {
@@ -15,7 +18,7 @@ export default function KontaktPage() {
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Werkstatt", url: "/" },
+          { name: "Startseite", url: "/" },
           { name: "Kontakt", url: "/kontakt" }
         ]}
       />

@@ -85,13 +85,13 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
   glasservice: {
     slug: "glasservice",
     title: "Glasservice",
-    heroImage: "/images/leistungen/glasservice.png",
+    heroImage: "/images/leistungen/glasservice.jpg",
     heroImageAlt: "Autoglas-Reparatur in der Meisterwerkstatt",
     lead:
       "Steinschlag in der Scheibe oder Riss? Sichern Sie sich schnell einen Termin. Wir tauschen Ihre Scheibe direkt und sauber aus, sodass Sie sicher weiterfahren können.",
     intro: [
       "Haben Sie einen Steinschlag in der Scheibe oder ist die Scheibe gerissen? Wir tauschen Ihre Scheibe direkt aus — als Partner eines Autoglas-Spezialisten mit festen Abläufen für Austausch und Kalibrierung.",
-      "Je früher ein Steinschlag versorgt wird, desto geringer das Risiko, dass sich ein Riss ausbreitet. Rufen Sie uns an, wir vereinbaren einen zeitnahen Termin."
+      "Je früher ein Steinschlag versorgt wird, desto geringer das Risiko, dass sich ein Riss ausbreitet. Rufen Sie uns an, wir vereinbaren einen zeitnahen Termin. Scheibentausch bei Steinschlag wird in der Regel über die Teilkasko-Versicherung abgewickelt — wir unterstützen Sie bei der Abwicklung mit Ihrer Versicherung."
     ],
     scope: {
       title: "Was wir im Glasservice machen",
@@ -99,6 +99,7 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
         "Scheibentausch nach Steinschlag",
         "Scheibentausch bei Riss",
         "Autoglas-Spezialist Partner",
+        "Unterstützung bei Teilkasko-Abwicklung",
         "Schnelle Termine"
       ]
     },
@@ -106,6 +107,10 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
       {
         q: "Was soll ich bei einem Steinschlag tun?",
         a: "Rufen Sie uns zeitnah an. Ein Steinschlag kann sich bei Temperaturwechsel oder Erschütterung ausbreiten. Wir prüfen den Schaden und tauschen die Scheibe aus, damit Sie sicher weiterfahren können."
+      },
+      {
+        q: "Zahlt die Versicherung die neue Scheibe?",
+        a: "In der Regel übernimmt die Teilkasko-Versicherung den Scheibentausch nach einem Steinschlag. Bringen Sie uns Ihre Versicherungsdaten zum Termin mit, wir unterstützen Sie bei der Abwicklung."
       },
       {
         q: "Sind Sie Autoglas-Spezialist?",
@@ -116,7 +121,7 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
   "reifenwechsel-lagerung": {
     slug: "reifenwechsel-lagerung",
     title: "Reifenwechsel & Lagerung",
-    heroImage: "/images/leistungen/reifenwechsel-lagerung.png",
+    heroImage: "/images/leistungen/reifenwechsel-lagerung.jpg",
     heroImageAlt: "Reifenservice in der Meisterwerkstatt",
     lead:
       "Rechtzeitig den Termin für den Reifenwechsel sichern — besonders vor Wintereinbruch. Wir wechseln Ihre Räder und lagern die gewechselten Reifen auf großräumigen, geschützten Flächen bei uns ein.",
@@ -185,7 +190,7 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
   oelwechsel: {
     slug: "oelwechsel",
     title: "Ölwechsel",
-    heroImage: "/images/leistungen/oelwechsel.png",
+    heroImage: "/images/leistungen/oelwechsel.jpg",
     heroImageAlt: "Ölwechsel in der Meisterwerkstatt",
     lead:
       "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel.",
@@ -201,7 +206,17 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
         "Langer Motorlauf",
         "MOTUL Öl-Station"
       ]
-    }
+    },
+    faqs: [
+      {
+        q: "Welches Öl verwenden Sie?",
+        a: "Als autorisierte MOTUL Öl-Station arbeiten wir mit MOTUL-Produkten passend zu Ihrem Fahrzeugmodell und Fahrprofil."
+      },
+      {
+        q: "Wie oft sollte man das Öl wechseln lassen?",
+        a: "Wir orientieren uns an der Vorgabe Ihres Fahrzeugherstellers und an Ihrem Fahrprofil. Sprechen Sie uns gerne zum Termin darauf an."
+      }
+    ]
   },
   motorrad: {
     slug: "motorrad",
@@ -210,17 +225,34 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80",
     heroImageAlt: "Motorrad in der Meisterwerkstatt",
     lead:
-      "Auch Motorräder bringen wir in unserer Werkstatt wieder auf die Straße. Sprechen Sie uns an für Termin und Umfang.",
+      "Auch Motorräder bringen wir in unserer Werkstatt in Saarlouis wieder auf die Straße. Sprechen Sie uns an für Termin und Umfang.",
     intro: [
-      "Neben PKW und Transportern nehmen wir in unserer Werkstatt auch Motorräder an. Rufen Sie uns am besten vorab an, dann klären wir Umfang und Termin direkt."
+      "Neben PKW und Transportern nehmen wir in unserer Werkstatt auch Motorräder an. Von der Saisonvorbereitung über Verschleißteile bis zur Reparatur: wir prüfen, besprechen und arbeiten offen mit Ihnen durch.",
+      "Weil Motorrad-Arbeiten oft stark vom Modell und Zustand abhängen, klären wir Umfang und Termin am besten vorab telefonisch. Rufen Sie uns an, dann planen wir den Termin passend zu Ihrem Fahrzeug."
     ],
     scope: {
       title: "Was wir am Motorrad machen",
       items: [
         "Wartung und Reparatur",
-        "Terminabsprache direkt",
+        "Saisonvorbereitung",
+        "Verschleißteile",
+        "Terminabsprache telefonisch",
         "In unserer Werkstatt in Saarlouis"
       ]
-    }
+    },
+    faqs: [
+      {
+        q: "Nehmen Sie auch Motorräder an?",
+        a: "Ja. Neben PKW und Transportern bringen wir auch Motorräder in unserer Werkstatt in Saarlouis wieder auf die Straße."
+      },
+      {
+        q: "Wie bekomme ich einen Termin für mein Motorrad?",
+        a: "Am besten telefonisch unter 06831 9618905. Weil der Aufwand stark vom Modell und Zustand abhängt, klären wir Umfang und Termin direkt mit Ihnen."
+      },
+      {
+        q: "Was wird gemacht?",
+        a: "Wartung, Reparatur, Saisonvorbereitung, Verschleißteile. Welche Arbeiten konkret anfallen, besprechen wir vor Beginn offen mit Ihnen."
+      }
+    ]
   }
 };

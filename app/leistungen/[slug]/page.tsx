@@ -10,6 +10,7 @@ import {
   ServiceJsonLd
 } from "@/components/JsonLd";
 import ContactCTA from "@/components/ContactCTA";
+import CallBar from "@/components/CallBar";
 
 export const dynamicParams = false;
 
@@ -28,7 +29,10 @@ export async function generateMetadata({
   return {
     title: `${content.title} in Saarlouis`,
     description: content.lead,
-    alternates: { canonical: `/leistungen/${content.slug}` },
+    alternates: {
+      canonical: `/leistungen/${content.slug}`,
+      languages: { "de-DE": `/leistungen/${content.slug}` }
+    },
     openGraph: {
       title: `${content.title} · Fahrzeugtechnik Staudt Saarlouis`,
       description: content.lead,
@@ -58,7 +62,7 @@ export default async function ServicePage({
       />
       <BreadcrumbJsonLd
         items={[
-          { name: "Werkstatt", url: "/" },
+          { name: "Startseite", url: "/" },
           { name: "Leistungen", url: "/portfolio" },
           { name: content.title, url: `/leistungen/${content.slug}` }
         ]}
@@ -97,6 +101,7 @@ export default async function ServicePage({
             <p className="mt-8 max-w-2xl text-[17px] leading-relaxed text-white/70">
               {content.lead}
             </p>
+            <CallBar />
           </div>
         </section>
 

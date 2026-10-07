@@ -6,6 +6,7 @@ import Image from "next/image";
 
 type Service = {
   no: string;
+  slug: string;
   title: string;
   copy: string;
   bullets: string[];
@@ -17,6 +18,7 @@ type Service = {
 const services: Service[] = [
   {
     no: "01",
+    slug: "inspektion",
     title: "Inspektion",
     copy:
       "Neu-, Jahres- oder Gebrauchtwagen: die Inspektion nach Herstellervorgabe hält Ihr Auto im sicheren Betrieb und schützt Sie wie andere Verkehrsteilnehmer.",
@@ -26,6 +28,7 @@ const services: Service[] = [
   },
   {
     no: "02",
+    slug: "hu-au",
     title: "HU · AU",
     copy:
       "Hauptuntersuchung nach § 29 StVZO, Abgasuntersuchung ist fester Bestandteil. Wir bereiten Ihr Fahrzeug vor, TÜV donnerstags durch Dekra vor Ort.",
@@ -35,24 +38,27 @@ const services: Service[] = [
   },
   {
     no: "03",
+    slug: "glasservice",
     title: "Glasservice",
     copy:
       "Steinschlag in der Scheibe oder Riss? Sichern Sie sich schnell Ihren Termin. Wir tauschen Ihre Scheibe direkt aus, sodass Sie sicher weiterfahren können.",
     bullets: ["Autoglas-Spezialist Partner", "Scheibentausch", "Schnelle Termine"],
-    image: "/images/leistungen/glasservice.png",
+    image: "/images/leistungen/glasservice.jpg",
     focus: true,
     focusLabel: "Spezialisierung"
   },
   {
     no: "04",
+    slug: "reifenwechsel-lagerung",
     title: "Reifenwechsel & Lagerung",
     copy:
       "Rechtzeitig Termin für den Reifenwechsel vor Wintereinbruch. Großräumige, geschützte Flächen für die Lagerung Ihrer gewechselten Reifen.",
     bullets: ["Reifenwechsel", "Sichere Lagerung", "Vor Wintereinbruch"],
-    image: "/images/leistungen/reifenwechsel-lagerung.png"
+    image: "/images/leistungen/reifenwechsel-lagerung.jpg"
   },
   {
     no: "05",
+    slug: "kfz-service",
     title: "KFZ-Service",
     copy:
       "Umfassender KFZ-Service: Bremsen und Bremsflüssigkeit, Stoßdämpfer, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles.",
@@ -62,14 +68,16 @@ const services: Service[] = [
   },
   {
     no: "06",
+    slug: "oelwechsel",
     title: "Ölwechsel",
     copy:
       "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel. MOTUL Öl-Station.",
     bullets: ["Regelmäßiger Wechsel", "MOTUL Öl-Station", "Langer Motorlauf"],
-    image: "/images/leistungen/oelwechsel.png"
+    image: "/images/leistungen/oelwechsel.jpg"
   },
   {
     no: "07",
+    slug: "motorrad",
     title: "Motorrad-Service",
     copy:
       "Auch Motorräder bringen wir in unserer Werkstatt wieder auf die Straße. Sprechen Sie uns an für Termin und Umfang.",
@@ -158,7 +166,14 @@ function ServiceCard({ s, index }: { s: Service; index: number }) {
             </li>
           ))}
         </ul>
-        <div className="mt-8">
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <Link
+            href={`/leistungen/${s.slug}`}
+            className="group inline-flex items-center gap-2 rounded-lg bg-signal/15 px-4 py-2.5 text-[13.5px] font-medium text-signal transition hover:bg-signal/25"
+          >
+            Mehr zu {s.title}
+            <span className="transition group-hover:translate-x-0.5">→</span>
+          </Link>
           <Link
             href="/kontakt"
             className="group inline-flex items-center gap-2 rounded-lg border border-white/12 bg-white/[0.03] px-4 py-2.5 text-[13.5px] text-white/90 transition hover:bg-white/[0.07]"

@@ -8,7 +8,6 @@ import { BusinessJsonLd, WebSiteJsonLd } from "@/components/JsonLd";
 
 export const viewport: Viewport = {
   themeColor: "#26282a",
-  colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover"
@@ -28,7 +27,10 @@ export const metadata: Metadata = {
   },
   description:
     "Kfz-Meisterwerkstatt in Saarlouis: Inspektion, HU/AU, Glasservice, Reifenwechsel und -lagerung, kompletter KFZ-Service, Ölwechsel und Motorrad-Service. TÜV donnerstags vor Ort durch Dekra. Termin unter 06831 9618905.",
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    languages: { "de-DE": "/" }
+  },
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
@@ -44,9 +46,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&h=630&q=80",
-        width: 1200,
-        height: 630,
+        url: "/images/leistungen/glasservice.jpg",
+        width: 1448,
+        height: 1086,
         alt: "Fahrzeugtechnik Staudt · Meisterwerkstatt Saarlouis"
       }
     ]
@@ -56,9 +58,7 @@ export const metadata: Metadata = {
     title: "Fahrzeugtechnik Staudt · Die Meisterwerkstatt in Saarlouis",
     description:
       "Meisterbetrieb für Inspektion, HU/AU, Glasservice, Reifenservice und Ölwechsel in Saarlouis.",
-    images: [
-      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&h=630&q=80"
-    ]
+    images: ["/images/leistungen/glasservice.jpg"]
   },
   robots: { index: true, follow: true }
 };

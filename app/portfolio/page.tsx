@@ -12,7 +12,10 @@ export const metadata: Metadata = {
   title: "Leistungen",
   description:
     "Inspektion, HU/AU, Glasservice, Reifenwechsel und -lagerung, KFZ-Service und Ölwechsel in Saarlouis. Alle Leistungen aus einer Meisterhand.",
-  alternates: { canonical: "/portfolio" }
+  alternates: {
+    canonical: "/portfolio",
+    languages: { "de-DE": "/portfolio" }
+  }
 };
 
 export default function PortfolioPage() {
@@ -20,7 +23,7 @@ export default function PortfolioPage() {
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Werkstatt", url: "/" },
+          { name: "Startseite", url: "/" },
           { name: "Leistungen", url: "/portfolio" }
         ]}
       />

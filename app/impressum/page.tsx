@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Impressum",
   description:
     "Impressum der Fahrzeugtechnik Staudt · Die Meisterwerkstatt in Saarlouis.",
-  alternates: { canonical: "/impressum" }
+  alternates: {
+    canonical: "/impressum",
+    languages: { "de-DE": "/impressum" }
+  }
 };
 
 export default function ImpressumPage() {
@@ -13,7 +16,7 @@ export default function ImpressumPage() {
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Werkstatt", url: "/" },
+          { name: "Startseite", url: "/" },
           { name: "Impressum", url: "/impressum" }
         ]}
       />
@@ -51,7 +54,11 @@ export default function ImpressumPage() {
               Kontakt
             </div>
             <p className="mt-2 spec-num">
-              Telefon: 06831 9618905<br />
+              Telefon:{" "}
+              <a href="tel:+4968319618905" className="text-signal underline underline-offset-4">
+                06831 9618905
+              </a>
+              <br />
               Fax: 06831 9618904<br />
               E-Mail:{" "}
               <a href="mailto:info@fzgtechstaudt.de" className="text-signal underline underline-offset-4">

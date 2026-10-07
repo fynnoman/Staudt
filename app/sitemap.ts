@@ -1,13 +1,5 @@
 import type { MetadataRoute } from "next";
-
-const SERVICE_SLUGS = [
-  "inspektion",
-  "hu-au",
-  "glasservice",
-  "reifenwechsel-lagerung",
-  "kfz-service",
-  "oelwechsel"
-] as const;
+import { SERVICES } from "@/lib/business";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.fzgtechstaudt.de";
@@ -17,8 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, lastModified: now, changeFrequency: "monthly", priority: 1.0 },
     { url: `${base}/portfolio`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    ...SERVICE_SLUGS.map((slug) => ({
-      url: `${base}/leistungen/${slug}`,
+    ...SERVICES.map((s) => ({
+      url: `${base}/leistungen/${s.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8

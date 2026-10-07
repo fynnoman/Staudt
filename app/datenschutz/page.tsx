@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Datenschutz",
   description:
     "Datenschutzerklärung der Fahrzeugtechnik Staudt · Die Meisterwerkstatt in Saarlouis.",
-  alternates: { canonical: "/datenschutz" }
+  alternates: {
+    canonical: "/datenschutz",
+    languages: { "de-DE": "/datenschutz" }
+  }
 };
 
 const sections = [
@@ -179,7 +182,7 @@ export default function DatenschutzPage() {
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Werkstatt", url: "/" },
+          { name: "Startseite", url: "/" },
           { name: "Datenschutz", url: "/datenschutz" }
         ]}
       />
