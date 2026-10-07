@@ -1,4 +1,5 @@
 import { BUSINESS, SERVICES, SITE_URL } from "@/lib/business";
+import { REVIEWS } from "@/lib/reviews";
 
 const BUSINESS_ID = `${SITE_URL}/#business`;
 
@@ -27,6 +28,24 @@ const address = {
 };
 
 export function BusinessJsonLd({ sameAs = [] as string[] }: { sameAs?: string[] }) {
+  const reviewObjects = REVIEWS.map((r) => ({
+    "@type": "Review",
+    "@id": `${SITE_URL}/#${r.id}`,
+    author: { "@type": "Person", name: r.author },
+    datePublished: r.date,
+    reviewBody: r.body,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: r.rating,
+      bestRating: 5,
+      worstRating: 1
+    },
+    publisher: { "@type": "Organization", name: r.source }
+  }));
+
+  const ratings = REVIEWS.map((r) => r.rating);
+  const avg = ratings.reduce((a, b) => a + b, 0) / ratings.length;
+
   const data = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
@@ -73,6 +92,15 @@ export function BusinessJsonLd({ sameAs = [] as string[] }: { sameAs?: string[] 
         }
       }))
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: avg.toFixed(1),
+      bestRating: 5,
+      worstRating: 1,
+      reviewCount: REVIEWS.length,
+      ratingCount: REVIEWS.length
+    },
+    review: reviewObjects,
     ...(sameAs.length > 0 ? { sameAs } : {})
   };
 

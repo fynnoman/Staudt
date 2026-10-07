@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s · Fahrzeugtechnik Staudt"
   },
   description:
-    "Kfz-Meisterwerkstatt in Saarlouis: Inspektion, HU/AU, Glasservice, Reifenwechsel und -lagerung, kompletter KFZ-Service und Ölwechsel. TÜV donnerstags vor Ort durch Dekra. Termin unter 06831 9618905.",
+    "Kfz-Meisterwerkstatt in Saarlouis: Inspektion, HU/AU, Glasservice, Reifenwechsel und -lagerung, kompletter KFZ-Service, Ölwechsel und Motorrad-Service. TÜV donnerstags vor Ort durch Dekra. Termin unter 06831 9618905.",
   alternates: { canonical: "/" },
   icons: {
     icon: "/icon.png",

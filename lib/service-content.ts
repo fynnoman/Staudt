@@ -153,15 +153,16 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80",
     heroImageAlt: "Kfz-Service in der Meisterwerkstatt",
     lead:
-      "Umfassender KFZ-Service unter einem Dach: Bremsen und Bremsflüssigkeit, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles.",
+      "Umfassender KFZ-Service unter einem Dach: Bremsen und Bremsflüssigkeit, Stoßdämpfer, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles.",
     intro: [
-      "Mit unserem umfassenden KFZ-Service kümmern wir uns um alle wichtigen Baugruppen Ihres Fahrzeugs: von den Bremsen über Zahnriemen, Motor, Getriebe und Fahrwerk bis zur Klimaanlage.",
+      "Mit unserem umfassenden KFZ-Service kümmern wir uns um alle wichtigen Baugruppen Ihres Fahrzeugs: von den Bremsen und Stoßdämpfern über Zahnriemen, Motor, Getriebe und Fahrwerk bis zur Klimaanlage.",
       "Für Sie bedeutet das einen Ansprechpartner — statt für jede Reparatur eine andere Werkstatt."
     ],
     scope: {
       title: "Was zum KFZ-Service gehört",
       items: [
         "Bremsen und Bremsflüssigkeit",
+        "Stoßdämpfer",
         "Zahnriemen",
         "Motor und Getriebe",
         "Fahrwerk",
@@ -171,11 +172,15 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
     faqs: [
       {
         q: "Was gehört zum KFZ-Service?",
-        a: "Bremsen und Bremsflüssigkeit, Zahnriemen, Motor, Getriebe, Fahrwerk und Klimaanlage."
+        a: "Bremsen und Bremsflüssigkeit, Stoßdämpfer, Zahnriemen, Motor, Getriebe, Fahrwerk und Klimaanlage."
       },
       {
         q: "Machen Sie auch Klimaanlagen?",
         a: "Ja, die Klimaanlage ist Teil unseres KFZ-Service."
+      },
+      {
+        q: "Tauschen Sie Stoßdämpfer?",
+        a: "Ja, Stoßdämpfer gehören fest zu unserem KFZ-Service."
       }
     ]
   },
@@ -189,7 +194,7 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
       "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel.",
     intro: [
       "Der Ölwechsel gehört zu den wichtigsten regelmäßigen Service-Arbeiten. Ein Fahrzeug, dessen Öl in sauberem Zustand ist, läuft ruhiger, verbraucht weniger und hält länger.",
-      "Wir übernehmen den Wechsel für Ihr Fahrzeug — passend zu Ihrem Fahrzeugmodell und Fahrprofil."
+      "Wir übernehmen den Wechsel für Ihr Fahrzeug — passend zu Ihrem Fahrzeugmodell und Fahrprofil. Als autorisierte MOTUL Öl-Station arbeiten wir mit entsprechend geprüften Produkten."
     ],
     scope: {
       title: "Warum regelmäßig",
@@ -197,7 +202,27 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
         "Niedriger Verbrauch",
         "Ruhiger, geräuscharmer Lauf",
         "Langer Motorlauf",
-        "Regelmäßiger Wechsel"
+        "MOTUL Öl-Station"
+      ]
+    }
+  },
+  motorrad: {
+    slug: "motorrad",
+    title: "Motorrad-Service",
+    heroImage:
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80",
+    heroImageAlt: "Motorrad in der Meisterwerkstatt",
+    lead:
+      "Auch Motorräder bringen wir in unserer Werkstatt wieder auf die Straße. Sprechen Sie uns an für Termin und Umfang.",
+    intro: [
+      "Neben PKW und Transportern nehmen wir in unserer Werkstatt auch Motorräder an. Rufen Sie uns am besten vorab an, dann klären wir Umfang und Termin direkt."
+    ],
+    scope: {
+      title: "Was wir am Motorrad machen",
+      items: [
+        "Wartung und Reparatur",
+        "Terminabsprache direkt",
+        "In unserer Werkstatt in Saarlouis"
       ]
     }
   }

@@ -33,7 +33,7 @@ export default function PortfolioPage() {
           </p>
           <h1 className="max-w-4xl text-[clamp(2.2rem,7vw,5.8rem)] font-semibold leading-[1] tracking-tightest">
             Unser Portfolio.<br />
-            <span className="text-white/50">Sechs Wege, Ihr Auto sicher zu machen.</span>
+            <span className="text-white/50">Sieben Wege, Ihr Auto sicher zu machen.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-[17px] leading-relaxed text-white/70">
             Von der Routine-Inspektion bis zum kompletten KFZ-Service. Wir
@@ -54,7 +54,7 @@ export default function PortfolioPage() {
                   Leistungen
                 </p>
                 <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
-                  6 Kernleistungen
+                  7 Kernleistungen
                 </span>
               </div>
               <h2 className="max-w-2xl text-[clamp(2rem,4.4vw,3.6rem)] font-semibold leading-[1.02] tracking-tightest">

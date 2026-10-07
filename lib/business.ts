@@ -53,9 +53,9 @@ export const SERVICES = [
   {
     slug: "kfz-service",
     name: "KFZ-Service",
-    short: "Bremsen, Motor, Getriebe, Fahrwerk, Klimaanlage",
+    short: "Bremsen, Stoßdämpfer, Motor, Getriebe, Fahrwerk, Klimaanlage",
     description:
-      "Umfassender KFZ-Service: Bremsen und Bremsflüssigkeit, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles."
+      "Umfassender KFZ-Service: Bremsen und Bremsflüssigkeit, Stoßdämpfer, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles."
   },
   {
     slug: "oelwechsel",
@@ -63,6 +63,13 @@ export const SERVICES = [
     short: "Regelmäßiger Ölwechsel für langen Motorlauf",
     description:
       "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel."
+  },
+  {
+    slug: "motorrad",
+    name: "Motorrad-Service",
+    short: "Wartung und Reparatur für Motorräder",
+    description:
+      "Auch Motorräder bringen wir in unserer Werkstatt wieder auf die Straße. Sprechen Sie uns an für Termin und Umfang."
   }
 ] as const;
 

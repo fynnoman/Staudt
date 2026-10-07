@@ -9,12 +9,15 @@ const items = [
   "REIFENSERVICE",
   "KFZ-SERVICE",
   "ÖLWECHSEL",
+  "MOTORRAD",
   "BREMSE",
+  "STOSSDÄMPFER",
   "FAHRWERK",
   "KLIMAANLAGE",
   "MOTOR",
   "GETRIEBE",
-  "TÜV DO."
+  "MOTUL ÖL-STATION",
+  "DEKRA · TÜV DO."
 ];
 
 export default function Marquee() {

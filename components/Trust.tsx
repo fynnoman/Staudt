@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const stats = [
   { n: "Meister", l: "geführter Betrieb", sub: "Die Meisterwerkstatt" },
   { n: "Do.", l: "TÜV vor Ort", sub: "Dekra Prüfstelle" },
-  { n: "6", l: "Kernleistungen", sub: "Aus einer Hand" },
+  { n: "7", l: "Kernleistungen", sub: "Aus einer Hand" },
   { n: "AU", l: "fester HU-Teil", sub: "Abgasuntersuchung inkl." }
 ];
 

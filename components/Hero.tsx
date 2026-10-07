@@ -401,7 +401,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-5 pb-8 md:px-8">
         <div className="glass grid grid-cols-1 divide-y divide-white/8 overflow-hidden rounded-2xl sm:grid-cols-2 sm:divide-x md:grid-cols-4 md:divide-y-0">
           {[
-            { k: "6", l: "Kernleistungen", s: "aus einer Hand" },
+            { k: "7", l: "Kernleistungen", s: "aus einer Hand" },
             { k: "Do.", l: "TÜV vor Ort", s: "durch Dekra" },
             { k: "1×1", l: "Meisterbetrieb", s: "geführt" },
             { k: "AU", l: "fester HU-Teil", s: "Abgasuntersuchung" }

@@ -57,8 +57,8 @@ const services: Service[] = [
     no: "05",
     title: "KFZ-Service",
     copy:
-      "Umfassender KFZ-Service: Bremsen und Bremsflüssigkeit, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles.",
-    bullets: ["Bremse & Fahrwerk", "Motor & Getriebe", "Klimaanlage"],
+      "Umfassender KFZ-Service: Bremsen und Bremsflüssigkeit, Stoßdämpfer, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles.",
+    bullets: ["Bremse & Stoßdämpfer", "Motor & Getriebe", "Fahrwerk & Klima"],
     image:
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80"
   },
@@ -66,10 +66,19 @@ const services: Service[] = [
     no: "06",
     title: "Ölwechsel",
     copy:
-      "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel.",
-    bullets: ["Regelmäßiger Wechsel", "Niedriger Verbrauch", "Langer Motorlauf"],
+      "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel. MOTUL Öl-Station.",
+    bullets: ["Regelmäßiger Wechsel", "MOTUL Öl-Station", "Langer Motorlauf"],
     image:
       "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&w=1600&q=80"
+  },
+  {
+    no: "07",
+    title: "Motorrad-Service",
+    copy:
+      "Auch Motorräder bringen wir in unserer Werkstatt wieder auf die Straße. Sprechen Sie uns an für Termin und Umfang.",
+    bullets: ["Wartung & Reparatur", "Terminabsprache direkt", "In Saarlouis"],
+    image:
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80"
   }
 ];
 
@@ -99,32 +108,11 @@ function ServiceCard({ s, index }: { s: Service; index: number }) {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute left-6 top-5 select-none font-mono text-[clamp(4rem,10vw,7rem)] font-semibold leading-none tracking-tightest text-white/[0.07]"
-            >
-              №{s.no}
-            </div>
             <div aria-hidden className="pointer-events-none absolute inset-0">
               <div className="absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-white/40" />
               <div className="absolute right-3 top-3 h-4 w-4 border-r-2 border-t-2 border-white/40" />
               <div className="absolute bottom-3 left-3 h-4 w-4 border-b-2 border-l-2 border-white/40" />
               <div className="absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-white/40" />
-            </div>
-            <div className="absolute inset-x-6 bottom-5 flex items-center justify-between">
-              <span className="text-[11px] uppercase tracking-[0.22em] text-white/70">
-                Leistung {s.no}
-              </span>
-              {s.focus ? (
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-signal/60 bg-signal/15 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-signal">
-                  <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-                  {s.focusLabel ?? "Fokus"}
-                </span>
-              ) : (
-                <span className="glass-chip rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white/80">
-                  Meister
-                </span>
-              )}
             </div>
           </div>
         </div>
@@ -208,7 +196,7 @@ export default function ServicesShowcase() {
             </h2>
           </div>
           <p className="max-w-md text-[16px] leading-relaxed text-white/60">
-            Sechs Kernleistungen, ein Betrieb. Vom Ölwechsel bis zur
+            Sieben Kernleistungen, ein Betrieb. Vom Ölwechsel bis zur
             HU-Vorbereitung: Meisterhand, ehrlich beraten, sauber ausgeführt.
           </p>
         </div>

@@ -3,6 +3,7 @@ import Marquee from "@/components/Marquee";
 import StickyScaleImage from "@/components/StickyScaleImage";
 import ServicesShowcase from "@/components/ServicesShowcase";
 import Trust from "@/components/Trust";
+import Reviews from "@/components/Reviews";
 import ProcessSteps from "@/components/ProcessSteps";
 import WerkstattGallery from "@/components/WerkstattGallery";
 import Standort from "@/components/Standort";
@@ -35,6 +36,8 @@ export default function HomePage() {
       <ServicesShowcase />
 
       <Trust />
+
+      <Reviews />
 
       <ProcessSteps />
 
