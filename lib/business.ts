@@ -25,51 +25,51 @@ export const SERVICES = [
   {
     slug: "inspektion",
     name: "Inspektion",
-    short: "Inspektion nach Herstellervorgabe",
+    short: "Inspektionen nach Herstellervorgabe",
     description:
-      "Regelmäßige Inspektion nach Herstellervorgabe für Neu-, Jahres- und Gebrauchtwagen. Hält Ihr Auto im sicheren, werterhaltenden Betrieb."
+      "Wir führen Inspektionen nach den Vorgaben des Fahrzeugherstellers durch und prüfen Ihr Fahrzeug sorgfältig."
   },
   {
     slug: "hu-au",
-    name: "HU · AU",
-    short: "Hauptuntersuchung mit Abgasuntersuchung",
+    name: "HU & AU",
+    short: "Hauptuntersuchung durch DEKRA bei uns vor Ort",
     description:
-      "Hauptuntersuchung nach § 29 StVZO, Abgasuntersuchung ist fester Bestandteil. TÜV wird regelmäßig donnerstags durch die Dekra vor Ort abgenommen."
+      "Wir bereiten Ihr Fahrzeug auf die Hauptuntersuchung vor. Jeden Donnerstag wird die HU durch DEKRA direkt bei uns in der Werkstatt durchgeführt."
   },
   {
     slug: "glasservice",
     name: "Glasservice",
-    short: "Scheibentausch bei Steinschlag und Riss",
+    short: "Scheibentausch bei Steinschlag oder Riss",
     description:
-      "Steinschlag in der Scheibe oder Riss? Wir tauschen Ihre Scheibe direkt und sauber aus, sodass Sie sicher weiterfahren können. Autoglas-Spezialist Partner."
+      "Steinschlag oder Riss in der Scheibe? Wir kümmern uns um den Austausch Ihrer Fahrzeugscheibe und vereinbaren schnellstmöglich einen Termin."
   },
   {
     slug: "reifenwechsel-lagerung",
     name: "Reifenwechsel & Lagerung",
-    short: "Reifenwechsel vor Wintereinbruch, geschützte Reifenlagerung",
+    short: "Reifenwechsel und Einlagerung Ihrer Räder",
     description:
-      "Rechtzeitig Termin für den Reifenwechsel vor Wintereinbruch. Großräumige, geschützte Flächen für die Lagerung Ihrer gewechselten Reifen."
+      "Wir wechseln Ihre Räder passend zur Saison und können Ihre Reifen auf Wunsch bis zum nächsten Wechsel bei uns einlagern."
   },
   {
     slug: "kfz-service",
     name: "KFZ-Service",
-    short: "Bremsen, Stoßdämpfer, Motor, Getriebe, Fahrwerk, Klimaanlage",
+    short: "Reparaturen an Bremsen, Fahrwerk, Motor, Getriebe und mehr",
     description:
-      "Umfassender KFZ-Service: Bremsen und Bremsflüssigkeit, Stoßdämpfer, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles."
+      "Wir übernehmen Wartungen und Reparaturen an vielen wichtigen Bauteilen Ihres Fahrzeugs."
   },
   {
     slug: "oelwechsel",
     name: "Ölwechsel",
-    short: "Regelmäßiger Ölwechsel für langen Motorlauf",
+    short: "Ölwechsel passend zu Ihrem Fahrzeug",
     description:
-      "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel."
+      "Wir führen den Ölwechsel passend zu Ihrem Fahrzeug nach Herstellervorgaben durch und verwenden hochwertige Motoröle."
   },
   {
     slug: "motorrad",
     name: "Motorrad-Service",
-    short: "Wartung und Reparatur für Motorräder",
+    short: "Wartung und Reparatur von Motorrädern",
     description:
-      "Auch Motorräder bringen wir in unserer Werkstatt wieder auf die Straße. Sprechen Sie uns an für Termin und Umfang."
+      "Auch Motorräder sind bei uns willkommen. Für Wartungen und Reparaturen sprechen Sie uns einfach an."
   }
 ] as const;
 

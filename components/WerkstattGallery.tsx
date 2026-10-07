@@ -42,12 +42,13 @@ export default function WerkstattGallery() {
               </span>
             </div>
             <h2 className="max-w-2xl text-[clamp(2rem,4.4vw,3.6rem)] font-semibold leading-[1.02] tracking-tightest">
-              Ordnung, Werkzeug, Handwerk.
+              Unsere Werkstatt.
             </h2>
           </div>
           <p className="hidden max-w-sm text-[15px] leading-relaxed text-white/60 md:block">
-            Ein Blick in unsere Halle. Aufgeräumte Arbeitsplätze und
-            saubere Werkzeuge sind für uns Ausdruck des Handwerks.
+            Werfen Sie einen Blick in unsere Werkstatt in Saarlouis. Hier
+            führen wir Wartungen, Inspektionen und Reparaturen fachgerecht
+            an Ihrem Fahrzeug durch.
           </p>
         </div>
 

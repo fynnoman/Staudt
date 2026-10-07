@@ -32,15 +32,15 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <p className="mb-5 inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
             <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-            Portfolio
+            Unsere Leistungen
           </p>
           <h1 className="max-w-4xl text-[clamp(2.2rem,7vw,5.8rem)] font-semibold leading-[1] tracking-tightest">
-            Unser Portfolio.<br />
-            <span className="text-white/50">Sieben Wege, Ihr Auto sicher zu machen.</span>
+            Unsere Leistungen.<br />
+            <span className="text-white/50">KFZ-Service in Saarlouis.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-[17px] leading-relaxed text-white/70">
-            Von der Routine-Inspektion bis zum kompletten KFZ-Service. Wir
-            arbeiten nach Herstellervorgabe und beraten ohne Werkstattlatein.
+            Von der regelmäßigen Inspektion bis zur Reparatur: Hier finden Sie
+            unsere wichtigsten Leistungen im Überblick.
           </p>
         </div>
       </section>
@@ -61,7 +61,7 @@ export default function PortfolioPage() {
                 </span>
               </div>
               <h2 className="max-w-2xl text-[clamp(2rem,4.4vw,3.6rem)] font-semibold leading-[1.02] tracking-tightest">
-                Alles für Ihren Wagen. Aus einer Meisterhand.
+                Alles rund um Ihr Fahrzeug.
               </h2>
             </div>
             <p className="max-w-md text-[16px] leading-relaxed text-white/60">
@@ -116,15 +116,18 @@ export default function PortfolioPage() {
 
       <StickyScaleImage
         image="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=2400&q=80"
-        eyebrow="Meister · Handwerk"
+        eyebrow="Sie haben Fragen?"
         headline={
           <>
-            Zu jeglichen Fragen<br />
-            <span className="text-signal">beraten wir Sie gerne.</span>
+            Wir beraten<br />
+            <span className="text-signal">Sie gerne.</span>
           </>
         }
         body={
-          <>Zögern Sie nicht, uns zu kontaktieren. Wir nehmen uns Zeit für Ihr Anliegen.</>
+          <>
+            Rufen Sie uns gerne an. Wir beraten Sie zu Ihrem Fahrzeug und
+            vereinbaren einen passenden Termin.
+          </>
         }
       />
 

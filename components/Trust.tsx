@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { n: "Meister", l: "geführter Betrieb", sub: "Die Meisterwerkstatt" },
-  { n: "Do.", l: "TÜV vor Ort", sub: "Dekra Prüfstelle" },
-  { n: "7", l: "Kernleistungen", sub: "Aus einer Hand" },
-  { n: "AU", l: "fester HU-Teil", sub: "Abgasuntersuchung inkl." }
+  { n: "Meister", l: "Betrieb", sub: "Persönlich geführt" },
+  { n: "Do.", l: "HU durch DEKRA", sub: "Vor Ort" },
+  { n: "7", l: "Leistungen", sub: "Rund um Auto und Motorrad" },
+  { n: "HU & AU", l: "Direkt bei uns", sub: "möglich" }
 ];
 
 export default function Trust() {
@@ -27,13 +27,14 @@ export default function Trust() {
                 </span>
               </div>
               <h2 className="text-[clamp(1.9rem,3.6vw,3rem)] font-semibold leading-[1.05] tracking-tightest">
-                Ehrliches Handwerk.<br />
-                <span className="text-white/55">Ohne Zwischenrufer.</span>
+                Persönlich. Zuverlässig.<br />
+                <span className="text-white/55">Meistergeführt.</span>
               </h2>
               <p className="mt-5 max-w-md text-[15.5px] leading-relaxed text-white/70">
-                Kein Callcenter, keine Kette. Sie sprechen mit dem Meister,
-                der Ihr Auto auch tatsächlich in die Hand nimmt. Kurzer
-                Draht, saubere Arbeit, faire Rechnung.
+                Bei uns sprechen Sie direkt mit Ihrem Ansprechpartner in der
+                Werkstatt. Wir erklären Ihnen verständlich, was an Ihrem
+                Fahrzeug gemacht werden muss, und stimmen Reparaturen vorher
+                mit Ihnen ab.
               </p>
             </div>
 

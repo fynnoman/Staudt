@@ -37,19 +37,19 @@ export default function ContactCTA() {
         <div className="mb-5 flex flex-wrap items-center justify-center gap-2">
           <p className="inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
             <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-            Termin
+            Termin vereinbaren
           </p>
           <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
             Sektion 07
           </span>
         </div>
         <h2 className="balance text-[clamp(2.2rem,5vw,4.2rem)] font-semibold leading-[1.02] tracking-tightest text-white">
-          Auto in gute Hände geben.<br />
-          <span className="text-white/60">Wir machen den Rest.</span>
+          Termin vereinbaren.
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-[16px] leading-relaxed text-white/70">
-          Ein Anruf reicht. Wir schauen sofort ins Buch und geben Ihnen einen
-          realistischen Termin plus ehrlichen Kostenrahmen.
+          Sie benötigen eine Inspektion, Reparatur oder einen anderen
+          Werkstatttermin? Rufen Sie uns einfach an oder senden Sie uns eine
+          Nachricht.
         </p>
 
         <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
@@ -64,7 +64,7 @@ export default function ContactCTA() {
             className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-white/12 bg-white/[0.03] px-5 py-3.5 text-[15px] font-medium text-white/90 backdrop-blur transition hover:bg-white/[0.06]"
           >
             Nachricht senden
-            <span>→</span>
+            <span aria-hidden>→</span>
           </Link>
         </div>
       </div>

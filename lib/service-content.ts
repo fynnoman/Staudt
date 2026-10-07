@@ -21,64 +21,52 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
       "https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=1600&q=80",
     heroImageAlt: "Fahrzeug auf der Hebebühne während der Inspektion",
     lead:
-      "Regelmäßige Service-Termine sind der einfachste Weg, Ihr Auto sicher und werterhaltend im Betrieb zu halten. Wir inspizieren nach Herstellervorgabe.",
+      "Regelmäßige Inspektionen helfen dabei, Verschleiß frühzeitig zu erkennen und Ihr Fahrzeug zuverlässig zu erhalten. Wir führen die Inspektion nach den Vorgaben Ihres Fahrzeugherstellers durch.",
     intro: [
-      "Egal ob Neu-, Jahres- oder Gebrauchtwagen: Mit regelmäßigen Inspektionen sind Sie auf der sicheren Seite. Die Inspektion nach Herstellervorgabe gewährleistet den einwandfreien Betrieb Ihres Fahrzeugs und damit Ihre eigene Sicherheit sowie die anderer Verkehrsteilnehmer.",
-      "Wir folgen den vom Hersteller vorgesehenen Prüfpunkten für Ihr Modell und sprechen auffällige Befunde offen mit Ihnen durch, bevor etwas repariert wird."
+      "Dabei kontrollieren wir die für Ihr Fahrzeug vorgesehenen Prüfpunkte. Sollte uns etwas auffallen, besprechen wir notwendige Arbeiten zuerst mit Ihnen."
     ],
     scope: {
-      title: "Was zur Inspektion gehört",
+      title: "Unsere Leistungen",
       items: [
-        "Prüfung nach Herstellervorgabe",
-        "Für Neu-, Jahres- und Gebrauchtwagen",
-        "Regelmäßige Service-Termine",
-        "Werterhaltender Betrieb"
+        "Inspektion nach Herstellervorgabe",
+        "Für Neu- und Gebrauchtwagen",
+        "Prüfung der vorgesehenen Bauteile und Flüssigkeiten",
+        "Persönliche Rücksprache bei zusätzlichen Arbeiten"
       ]
-    },
-    faqs: [
-      {
-        q: "Nach welchem Standard wird inspiziert?",
-        a: "Nach den Vorgaben Ihres Fahrzeugherstellers. Dadurch bleibt Ihr Auto so im Betrieb, wie es vorgesehen ist."
-      },
-      {
-        q: "Für welche Fahrzeuge ist die Inspektion geeignet?",
-        a: "Für Neu-, Jahres- und Gebrauchtwagen aller gängigen Marken."
-      }
-    ]
+    }
   },
   "hu-au": {
     slug: "hu-au",
-    title: "HU · AU",
+    title: "HU & AU",
     heroImage:
       "https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1600&q=80",
     heroImageAlt: "Hauptuntersuchung in der Kfz-Werkstatt",
     lead:
-      "Die Hauptuntersuchung nach § 29 StVZO stellt die Mängelfreiheit Ihres Fahrzeugs sicher. Wir bereiten Ihr Auto vor, der TÜV wird regelmäßig donnerstags durch die Dekra vor Ort abgenommen.",
+      "Die Hauptuntersuchung ist für Fahrzeuge regelmäßig gesetzlich vorgeschrieben. Bei uns können Sie Ihr Fahrzeug bequem auf die Prüfung vorbereiten und untersuchen lassen.",
     intro: [
-      "Die wiederkehrende Hauptuntersuchung (HU) ist nach § 29 StVZO gesetzlich vorgeschrieben. Die Abgasuntersuchung (AU) ist fester Bestandteil der HU.",
-      "In unserer Werkstatt inspizieren wir Ihr Auto vorab und machen es prüfbereit. Der TÜV wird dann donnerstags von der Dekra bei uns vor Ort abgenommen — Sie müssen keinen weiteren Termin bei einer separaten Prüfstelle organisieren."
+      "Jeden Donnerstag führt DEKRA die Hauptuntersuchung direkt bei uns in der Werkstatt durch."
     ],
     scope: {
-      title: "Was bei der HU abläuft",
+      title: "Das bieten wir",
       items: [
-        "Hauptuntersuchung nach § 29 StVZO",
-        "Abgasuntersuchung als fester Teil der HU",
-        "TÜV vor Ort donnerstags",
-        "Prüfung durch die Dekra"
+        "Vorbereitung auf die Hauptuntersuchung",
+        "HU durch DEKRA bei uns vor Ort",
+        "Jeden Donnerstag",
+        "Abgasuntersuchung im Rahmen der HU"
       ]
     },
     faqs: [
       {
-        q: "Wann ist der TÜV bei Ihnen vor Ort?",
-        a: "Donnerstags. An diesem Tag nimmt die Dekra die Hauptuntersuchung in unserer Werkstatt ab."
+        q: "Wann ist DEKRA bei Ihnen vor Ort?",
+        a: "Jeden Donnerstag. An diesem Tag führt DEKRA die Hauptuntersuchung direkt bei uns in der Werkstatt durch."
       },
       {
         q: "Ist die AU in der HU enthalten?",
-        a: "Ja. Die Abgasuntersuchung ist fester Bestandteil der Hauptuntersuchung nach § 29 StVZO."
+        a: "Ja. Die Abgasuntersuchung ist Teil der Hauptuntersuchung."
       },
       {
         q: "Wer nimmt die Prüfung ab?",
-        a: "Die Dekra. Wir bereiten Ihr Fahrzeug vor und begleiten den Termin."
+        a: "DEKRA. Wir bereiten Ihr Fahrzeug vor und begleiten den Termin."
       }
     ]
   },
@@ -88,35 +76,19 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
     heroImage: "/images/leistungen/glasservice.jpg",
     heroImageAlt: "Autoglas-Reparatur in der Meisterwerkstatt",
     lead:
-      "Steinschlag in der Scheibe oder Riss? Sichern Sie sich schnell einen Termin. Wir tauschen Ihre Scheibe direkt und sauber aus, sodass Sie sicher weiterfahren können.",
+      "Bei einem Steinschlag oder Riss in der Windschutzscheibe sollten Sie den Schaden möglichst schnell prüfen lassen.",
     intro: [
-      "Haben Sie einen Steinschlag in der Scheibe oder ist die Scheibe gerissen? Wir tauschen Ihre Scheibe direkt aus — als Partner eines Autoglas-Spezialisten mit festen Abläufen für Austausch und Kalibrierung.",
-      "Je früher ein Steinschlag versorgt wird, desto geringer das Risiko, dass sich ein Riss ausbreitet. Rufen Sie uns an, wir vereinbaren einen zeitnahen Termin. Scheibentausch bei Steinschlag wird in der Regel über die Teilkasko-Versicherung abgewickelt — wir unterstützen Sie bei der Abwicklung mit Ihrer Versicherung."
+      "Wir kümmern uns um den Scheibentausch und vereinbaren mit Ihnen einen passenden Termin."
     ],
     scope: {
-      title: "Was wir im Glasservice machen",
+      title: "Unser Glasservice",
       items: [
-        "Scheibentausch nach Steinschlag",
-        "Scheibentausch bei Riss",
-        "Autoglas-Spezialist Partner",
-        "Unterstützung bei Teilkasko-Abwicklung",
-        "Schnelle Termine"
+        "Scheibentausch bei Steinschlag",
+        "Scheibentausch bei Rissen",
+        "Fachgerechter Einbau",
+        "Schnelle Terminvereinbarung"
       ]
-    },
-    faqs: [
-      {
-        q: "Was soll ich bei einem Steinschlag tun?",
-        a: "Rufen Sie uns zeitnah an. Ein Steinschlag kann sich bei Temperaturwechsel oder Erschütterung ausbreiten. Wir prüfen den Schaden und tauschen die Scheibe aus, damit Sie sicher weiterfahren können."
-      },
-      {
-        q: "Zahlt die Versicherung die neue Scheibe?",
-        a: "In der Regel übernimmt die Teilkasko-Versicherung den Scheibentausch nach einem Steinschlag. Bringen Sie uns Ihre Versicherungsdaten zum Termin mit, wir unterstützen Sie bei der Abwicklung."
-      },
-      {
-        q: "Sind Sie Autoglas-Spezialist?",
-        a: "Wir arbeiten als Partner eines Autoglas-Spezialisten und haben die Abläufe für Scheibentausch und Kalibrierung fest im Griff."
-      }
-    ]
+    }
   },
   "reifenwechsel-lagerung": {
     slug: "reifenwechsel-lagerung",
@@ -124,30 +96,19 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
     heroImage: "/images/leistungen/reifenwechsel-lagerung.jpg",
     heroImageAlt: "Reifenservice in der Meisterwerkstatt",
     lead:
-      "Rechtzeitig den Termin für den Reifenwechsel sichern — besonders vor Wintereinbruch. Wir wechseln Ihre Räder und lagern die gewechselten Reifen auf großräumigen, geschützten Flächen bei uns ein.",
+      "Wir wechseln Ihre Räder passend zur Saison. Auf Wunsch können Sie Ihre nicht benötigten Räder bis zum nächsten Wechsel bei uns einlagern.",
     intro: [
-      "Reifenwechsel vor dem Wintereinbruch oder zum Saisonstart: Sichern Sie sich rechtzeitig einen Termin. In den Herbstwochen sind die Werkstätten der Region traditionell am stärksten gefragt.",
-      "Nach dem Wechsel brauchen Ihre eingelagerten Reifen Platz. Wir bieten großräumige, geschützte Flächen für die Lagerung — Sie geben die Räder bei uns ab und holen sie zur nächsten Saison einfach wieder."
+      "Gerade im Frühjahr und Herbst empfehlen wir eine frühzeitige Terminvereinbarung."
     ],
     scope: {
-      title: "Was wir übernehmen",
+      title: "Unsere Leistungen",
       items: [
-        "Reifenwechsel vor Wintereinbruch",
-        "Reifenlagerung auf geschützten Flächen",
-        "Großräumige Lagerflächen",
-        "Zuverlässige Saisonwechsel"
+        "Wechsel von Sommer- und Winterrädern",
+        "Einlagerung Ihrer Räder",
+        "Geschützte Lagerung",
+        "Terminvereinbarung für den nächsten Saisonwechsel"
       ]
-    },
-    faqs: [
-      {
-        q: "Lagern Sie meine Reifen ein?",
-        a: "Ja. Wir haben großräumige, geschützte Flächen für die Lagerung Ihrer gewechselten Reifen."
-      },
-      {
-        q: "Wann sollte ich den Reifenwechsel-Termin machen?",
-        a: "Rechtzeitig vor dem Wintereinbruch. In den Herbstwochen sind die Termine erfahrungsgemäß am stärksten nachgefragt."
-      }
-    ]
+    }
   },
   "kfz-service": {
     slug: "kfz-service",
@@ -156,13 +117,12 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80",
     heroImageAlt: "Kfz-Service in der Meisterwerkstatt",
     lead:
-      "Umfassender KFZ-Service unter einem Dach: Bremsen und Bremsflüssigkeit, Stoßdämpfer, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles.",
+      "Von Bremsen über Fahrwerk bis zur Klimaanlage: Wir übernehmen Wartungen und Reparaturen an zahlreichen Bauteilen Ihres Fahrzeugs.",
     intro: [
-      "Mit unserem umfassenden KFZ-Service kümmern wir uns um alle wichtigen Baugruppen Ihres Fahrzeugs: von den Bremsen und Stoßdämpfern über Zahnriemen, Motor, Getriebe und Fahrwerk bis zur Klimaanlage.",
-      "Für Sie bedeutet das einen Ansprechpartner — statt für jede Reparatur eine andere Werkstatt."
+      "Bei Fragen zu einer bestimmten Reparatur können Sie uns jederzeit kontaktieren."
     ],
     scope: {
-      title: "Was zum KFZ-Service gehört",
+      title: "Unter anderem kümmern wir uns um",
       items: [
         "Bremsen und Bremsflüssigkeit",
         "Stoßdämpfer",
@@ -171,21 +131,7 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
         "Fahrwerk",
         "Klimaanlage"
       ]
-    },
-    faqs: [
-      {
-        q: "Was gehört zum KFZ-Service?",
-        a: "Bremsen und Bremsflüssigkeit, Stoßdämpfer, Zahnriemen, Motor, Getriebe, Fahrwerk und Klimaanlage."
-      },
-      {
-        q: "Machen Sie auch Klimaanlagen?",
-        a: "Ja, die Klimaanlage ist Teil unseres KFZ-Service."
-      },
-      {
-        q: "Tauschen Sie Stoßdämpfer?",
-        a: "Ja, Stoßdämpfer gehören fest zu unserem KFZ-Service."
-      }
-    ]
+    }
   },
   oelwechsel: {
     slug: "oelwechsel",
@@ -193,30 +139,19 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
     heroImage: "/images/leistungen/oelwechsel.jpg",
     heroImageAlt: "Ölwechsel in der Meisterwerkstatt",
     lead:
-      "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel.",
+      "Regelmäßige Ölwechsel sind wichtig für die Schmierung und den Schutz Ihres Motors.",
     intro: [
-      "Der Ölwechsel gehört zu den wichtigsten regelmäßigen Service-Arbeiten. Ein Fahrzeug, dessen Öl in sauberem Zustand ist, läuft ruhiger, verbraucht weniger und hält länger.",
-      "Wir übernehmen den Wechsel für Ihr Fahrzeug — passend zu Ihrem Fahrzeugmodell und Fahrprofil. Als autorisierte MOTUL Öl-Station arbeiten wir mit entsprechend geprüften Produkten."
+      "Wir verwenden das für Ihr Fahrzeug vorgesehene Motoröl und wechseln auf Wunsch auch den Ölfilter."
     ],
     scope: {
-      title: "Warum regelmäßig",
+      title: "Unser Ölservice",
       items: [
-        "Niedriger Verbrauch",
-        "Ruhiger, geräuscharmer Lauf",
-        "Langer Motorlauf",
+        "Motorölwechsel",
+        "Ölfilterwechsel",
+        "Motoröl passend zum Fahrzeug",
         "MOTUL Öl-Station"
       ]
-    },
-    faqs: [
-      {
-        q: "Welches Öl verwenden Sie?",
-        a: "Als autorisierte MOTUL Öl-Station arbeiten wir mit MOTUL-Produkten passend zu Ihrem Fahrzeugmodell und Fahrprofil."
-      },
-      {
-        q: "Wie oft sollte man das Öl wechseln lassen?",
-        a: "Wir orientieren uns an der Vorgabe Ihres Fahrzeugherstellers und an Ihrem Fahrprofil. Sprechen Sie uns gerne zum Termin darauf an."
-      }
-    ]
+    }
   },
   motorrad: {
     slug: "motorrad",
@@ -225,34 +160,17 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80",
     heroImageAlt: "Motorrad in der Meisterwerkstatt",
     lead:
-      "Auch Motorräder bringen wir in unserer Werkstatt in Saarlouis wieder auf die Straße. Sprechen Sie uns an für Termin und Umfang.",
+      "Neben Autos kümmern wir uns auch um Motorräder.",
     intro: [
-      "Neben PKW und Transportern nehmen wir in unserer Werkstatt auch Motorräder an. Von der Saisonvorbereitung über Verschleißteile bis zur Reparatur: wir prüfen, besprechen und arbeiten offen mit Ihnen durch.",
-      "Weil Motorrad-Arbeiten oft stark vom Modell und Zustand abhängen, klären wir Umfang und Termin am besten vorab telefonisch. Rufen Sie uns an, dann planen wir den Termin passend zu Ihrem Fahrzeug."
+      "Für Wartungen und Reparaturen können Sie uns gerne kontaktieren. Wir klären vorab, welche Arbeiten notwendig sind, und vereinbaren einen passenden Termin."
     ],
     scope: {
-      title: "Was wir am Motorrad machen",
+      title: "Unsere Leistungen",
       items: [
-        "Wartung und Reparatur",
-        "Saisonvorbereitung",
-        "Verschleißteile",
-        "Terminabsprache telefonisch",
-        "In unserer Werkstatt in Saarlouis"
+        "Wartung",
+        "Reparaturen",
+        "Persönliche Terminvereinbarung"
       ]
-    },
-    faqs: [
-      {
-        q: "Nehmen Sie auch Motorräder an?",
-        a: "Ja. Neben PKW und Transportern bringen wir auch Motorräder in unserer Werkstatt in Saarlouis wieder auf die Straße."
-      },
-      {
-        q: "Wie bekomme ich einen Termin für mein Motorrad?",
-        a: "Am besten telefonisch unter 06831 9618905. Weil der Aufwand stark vom Modell und Zustand abhängt, klären wir Umfang und Termin direkt mit Ihnen."
-      },
-      {
-        q: "Was wird gemacht?",
-        a: "Wartung, Reparatur, Saisonvorbereitung, Verschleißteile. Welche Arbeiten konkret anfallen, besprechen wir vor Beginn offen mit Ihnen."
-      }
-    ]
+    }
   }
 };

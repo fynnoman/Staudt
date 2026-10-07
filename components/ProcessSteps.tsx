@@ -6,30 +6,30 @@ import { useRef } from "react";
 const steps = [
   {
     no: "01",
-    title: "Termin klären",
+    title: "Termin vereinbaren",
     body:
-      "Kurzer Anruf oder Nachricht, wir prüfen sofort die freien Slots und geben Ihnen einen realistischen Kostenrahmen.",
+      "Rufen Sie uns an oder schreiben Sie uns. Gemeinsam finden wir einen passenden Termin für Ihr Fahrzeug.",
     kbd: "call"
   },
   {
     no: "02",
-    title: "Diagnose vor Ort",
+    title: "Fahrzeug prüfen",
     body:
-      "Aufnahme in der Meisterwerkstatt: Fehlerspeicher, Sichtprüfung, Probefahrt. Sie bekommen Klartext, kein Werkstattlatein.",
+      "Wir prüfen Ihr Fahrzeug und stellen fest, welche Arbeiten notwendig sind.",
     kbd: "scan"
   },
   {
     no: "03",
-    title: "Freigabe & Preis",
+    title: "Arbeiten abstimmen",
     body:
-      "Sie entscheiden. Wir arbeiten erst, wenn Sie den Kostenvoranschlag freigegeben haben. Keine Überraschungen.",
+      "Bevor zusätzliche Reparaturen durchgeführt werden, besprechen wir diese mit Ihnen und informieren Sie über die voraussichtlichen Kosten.",
     kbd: "ok"
   },
   {
     no: "04",
-    title: "Sauber ausgeführt",
+    title: "Fahrzeug abholen",
     body:
-      "Reparatur nach Herstellervorgabe. Saubere Übergabe, Sie fahren sicher weiter.",
+      "Nach Abschluss der Arbeiten können Sie Ihr Fahrzeug wieder bei uns abholen.",
     kbd: "done"
   }
 ];
@@ -49,14 +49,14 @@ export default function ProcessSteps() {
           <div className="mb-4 flex flex-wrap items-center gap-2">
             <p className="inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
               <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-              So läuft's
+              So läuft es ab
             </p>
             <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
               Sektion 04
             </span>
           </div>
           <h2 className="max-w-3xl text-[clamp(2rem,4.4vw,3.6rem)] font-semibold leading-[1.05] tracking-tightest">
-            Vom Anruf bis zur Schlüsselübergabe. Ohne Rätselraten.
+            Einfach und unkompliziert.
           </h2>
         </div>
 

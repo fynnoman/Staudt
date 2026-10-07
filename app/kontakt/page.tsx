@@ -30,13 +30,13 @@ export default function KontaktPage() {
             Kontakt
           </p>
           <h1 className="max-w-4xl text-[clamp(2rem,6.6vw,5.4rem)] font-semibold leading-[1] tracking-tightest">
-            Ihr Kontakt zu uns.<br />
-            <span className="text-white/50">Kurzer Draht in die Meisterwerkstatt.</span>
+            Kontakt.
           </h1>
           <p className="mt-8 max-w-2xl text-[17px] leading-relaxed text-white/70">
-            Haben Sie Fragen zu unserem Angebot oder möchten Sie einen Termin
-            vereinbaren? Wir sind während der Öffnungszeiten telefonisch, per
-            E-Mail oder direkt vor Ort erreichbar.
+            Sie möchten einen Termin vereinbaren oder haben eine Frage? Rufen
+            Sie uns an, schreiben Sie uns eine E-Mail oder nutzen Sie das
+            Kontaktformular. Während unserer Öffnungszeiten sind wir gerne
+            für Sie da.
           </p>
         </div>
       </section>

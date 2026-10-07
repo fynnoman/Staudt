@@ -2,22 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useTransform
-} from "framer-motion";
-import { useNowSaarlouis, isOpen } from "@/lib/hours";
-
-const ROTATING = [
-  { word: "liefert.", tone: "text-signal" },
-  { word: "prüft.", tone: "text-signal" },
-  { word: "schraubt.", tone: "text-signal" },
-  { word: "wechselt.", tone: "text-signal" },
-  { word: "berät.", tone: "text-signal" }
-];
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useNowSaarlouis, isOpen, nextOpenLabel } from "@/lib/hours";
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -29,17 +16,9 @@ export default function Hero() {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const stampY = useTransform(scrollYProgress, [0, 1], ["0%", "-18%"]);
 
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    const t = setInterval(
-      () => setIdx((i) => (i + 1) % ROTATING.length),
-      2400
-    );
-    return () => clearInterval(t);
-  }, []);
-
   const now = useNowSaarlouis();
   const open = now ? isOpen(now) : true;
+  const openLabel = now && !open ? nextOpenLabel(now) : "Aktuelle Öffnungszeiten";
 
   return (
     <section
@@ -91,69 +70,25 @@ export default function Hero() {
               </span>
               Meisterbetrieb · Saarlouis
             </span>
-            <span className="glass-chip inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/65">
-              <span className="h-1 w-3 rounded-full bg-white/40" />
-              seit Handwerk
-            </span>
           </div>
 
-          <h1 className="balance text-[clamp(2.2rem,7.6vw,6.8rem)] font-semibold leading-[1] tracking-tightest text-white md:leading-[0.95]">
-            Werkstatt,
-            <br />
-            die{" "}
-            <span className="relative inline-flex align-baseline">
-              <span className="relative inline-block min-w-[5ch] overflow-hidden pb-1 pr-1 text-left sm:min-w-[6.5ch]">
-                <AnimatePresence mode="popLayout" initial={false}>
-                  <motion.span
-                    key={ROTATING[idx].word}
-                    initial={{ y: "100%", opacity: 0 }}
-                    animate={{ y: "0%", opacity: 1 }}
-                    exit={{ y: "-100%", opacity: 0 }}
-                    transition={{
-                      duration: 0.55,
-                      ease: [0.22, 1, 0.36, 1]
-                    }}
-                    className={`inline-block ${ROTATING[idx].tone}`}
-                  >
-                    {ROTATING[idx].word}
-                  </motion.span>
-                </AnimatePresence>
-                <span className="absolute inset-x-0 -bottom-0 h-2 rounded-full bg-signal/20 blur-lg" />
-              </span>
-            </span>
+          <h1 className="balance text-[clamp(2.2rem,7.2vw,6.4rem)] font-semibold leading-[1] tracking-tightest text-white md:leading-[0.95]">
+            Ihre KFZ-Werkstatt<br />
+            <span className="text-signal">in Saarlouis.</span>
           </h1>
 
           <p className="mt-7 max-w-xl text-[16.5px] leading-relaxed text-white/70 md:text-[18.5px]">
-            Inspektion, HU/AU, Glasservice, Reifen und Ölwechsel. Alles aus
-            einer Hand, sauber terminiert, ehrlich abgerechnet. Ihr Auto
-            verdient einen Meister.
+            Inspektion, HU/AU, Glasservice, Reifenservice, Ölwechsel und
+            Reparaturen. Persönlicher Service und zuverlässige Arbeit direkt
+            vom Meisterbetrieb.
           </p>
-
-          {/* Slogan signature */}
-          <div className="mt-8 flex items-center gap-5">
-            <Image
-              src="/images/slogan-mir-schaffe-du-faehrscht.png"
-              alt="Mir schaffe, du fährscht!"
-              width={96}
-              height={96}
-              className="h-20 w-20 shrink-0 mix-blend-screen opacity-95 md:h-24 md:w-24"
-            />
-            <div className="hidden min-w-0 sm:block">
-              <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
-                Unser Motto
-              </div>
-              <div className="mt-1 text-[15px] font-medium italic leading-snug text-white/85">
-                „Mir schaffe, du fährscht!"
-              </div>
-            </div>
-          </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href="/kontakt"
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-signal px-5 py-3.5 text-[15px] font-semibold text-black shadow-signal transition hover:bg-signal-soft"
             >
-              Termin sichern
+              Termin vereinbaren
               <svg
                 viewBox="0 0 24 24"
                 className="h-4 w-4 transition group-hover:translate-x-0.5"
@@ -203,10 +138,10 @@ export default function Hero() {
               </span>
               <div className="min-w-0">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
-                  Status
+                  {open ? "Geöffnet" : "Geschlossen"}
                 </div>
                 <div className="truncate text-[13px] font-medium text-white">
-                  {open ? "Geöffnet" : "Geschlossen"}
+                  {openLabel}
                 </div>
               </div>
             </div>
@@ -225,10 +160,10 @@ export default function Hero() {
               </span>
               <div className="min-w-0">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
-                  TÜV vor Ort
+                  Donnerstag
                 </div>
                 <div className="truncate text-[13px] font-medium text-white">
-                  Donnerstags · Dekra
+                  HU durch DEKRA vor Ort
                 </div>
               </div>
             </div>
@@ -247,7 +182,7 @@ export default function Hero() {
               </span>
               <div className="min-w-0">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
-                  Standort
+                  Saarlouis
                 </div>
                 <div className="truncate text-[13px] font-medium text-white">
                   Kohlbrunnenstraße 20
@@ -257,21 +192,17 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* RIGHT — image card + orbit stats */}
+        {/* RIGHT — image card */}
         <div className="col-span-12 md:col-span-5">
           <div className="relative mx-auto max-w-[86vw] sm:max-w-[320px] md:mx-0 md:ml-auto md:max-w-md">
-            {/* Vertical rail label */}
             <div className="pointer-events-none absolute -left-8 top-8 hidden origin-top-left rotate-90 text-[10px] uppercase tracking-[0.42em] text-white/35 md:block">
               Werkstatt · Saarlouis
             </div>
 
-            {/* Depth: soft signal glow behind card */}
             <div
               aria-hidden
               className="pointer-events-none absolute -inset-8 -z-10 rounded-[2.25rem] bg-signal/10 blur-3xl"
             />
-
-            {/* Depth: offset ghost frame behind card */}
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0 hidden translate-x-3 translate-y-3 rounded-3xl border border-white/8 md:block"
@@ -338,7 +269,6 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating badge */}
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{
@@ -372,7 +302,6 @@ export default function Hero() {
                   </div>
                 </div>
               </motion.div>
-
             </motion.div>
           </div>
         </div>
@@ -382,9 +311,9 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-5 pb-8 md:px-8">
         <div className="glass grid grid-cols-1 divide-y divide-white/8 overflow-hidden rounded-2xl sm:grid-cols-2 sm:divide-x md:grid-cols-4 md:divide-y-0">
           {[
-            { k: "7", l: "Kernleistungen", s: "aus einer Hand" },
-            { k: "Do.", l: "TÜV vor Ort", s: "durch Dekra" },
-            { k: "1×1", l: "Meisterbetrieb", s: "geführt" },
+            { k: "7", l: "Leistungen", s: "aus einer Hand" },
+            { k: "Do.", l: "HU durch DEKRA", s: "vor Ort" },
+            { k: "Meister", l: "Betrieb", s: "persönlich geführt" },
             { k: "AU", l: "fester HU-Teil", s: "Abgasuntersuchung" }
           ].map((s) => (
             <div key={s.l} className="flex flex-col gap-1 px-4 py-3.5 md:px-5 md:py-4">

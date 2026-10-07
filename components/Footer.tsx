@@ -20,9 +20,8 @@ export default function Footer() {
             </span>
           </div>
           <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/60">
-            Meisterbetrieb für Inspektion, HU/AU, Glasservice, Reifenservice
-            und den kompletten KFZ-Service. Persönlich, transparent, präzise.
-            Seit Jahren Ihre Werkstatt in Saarlouis.
+            Ihre Meisterwerkstatt in Saarlouis für Inspektion, HU/AU,
+            Glasservice, Reifenservice, Ölwechsel und Reparaturen.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a

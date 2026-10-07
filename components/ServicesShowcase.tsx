@@ -21,18 +21,18 @@ const services: Service[] = [
     slug: "inspektion",
     title: "Inspektion",
     copy:
-      "Neu-, Jahres- oder Gebrauchtwagen: die Inspektion nach Herstellervorgabe hält Ihr Auto im sicheren Betrieb und schützt Sie wie andere Verkehrsteilnehmer.",
-    bullets: ["Nach Herstellervorgabe", "Regelmäßige Service-Termine", "Werterhaltender Betrieb"],
+      "Wir führen Inspektionen nach den Vorgaben des Fahrzeugherstellers durch und prüfen Ihr Fahrzeug sorgfältig.",
+    bullets: ["Nach Herstellervorgabe", "Für viele Fahrzeugmarken", "Regelmäßige Wartung"],
     image:
       "https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=1600&q=80"
   },
   {
     no: "02",
     slug: "hu-au",
-    title: "HU · AU",
+    title: "HU & AU",
     copy:
-      "Hauptuntersuchung nach § 29 StVZO, Abgasuntersuchung ist fester Bestandteil. Wir bereiten Ihr Fahrzeug vor, TÜV donnerstags durch Dekra vor Ort.",
-    bullets: ["§ 29 StVZO", "TÜV Do. durch Dekra", "AU fester HU-Teil"],
+      "Wir bereiten Ihr Fahrzeug auf die Hauptuntersuchung vor. Jeden Donnerstag wird die HU durch DEKRA direkt bei uns in der Werkstatt durchgeführt.",
+    bullets: ["HU durch DEKRA vor Ort", "Jeden Donnerstag", "Abgasuntersuchung im Rahmen der HU"],
     image:
       "https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1600&q=80"
   },
@@ -41,19 +41,17 @@ const services: Service[] = [
     slug: "glasservice",
     title: "Glasservice",
     copy:
-      "Steinschlag in der Scheibe oder Riss? Sichern Sie sich schnell Ihren Termin. Wir tauschen Ihre Scheibe direkt aus, sodass Sie sicher weiterfahren können.",
-    bullets: ["Autoglas-Spezialist Partner", "Scheibentausch", "Schnelle Termine"],
-    image: "/images/leistungen/glasservice.jpg",
-    focus: true,
-    focusLabel: "Spezialisierung"
+      "Steinschlag oder Riss in der Scheibe? Wir kümmern uns um den Austausch Ihrer Fahrzeugscheibe und vereinbaren schnellstmöglich einen Termin.",
+    bullets: ["Scheibentausch", "Bei Steinschlag oder Riss", "Schnelle Terminvergabe"],
+    image: "/images/leistungen/glasservice.jpg"
   },
   {
     no: "04",
     slug: "reifenwechsel-lagerung",
     title: "Reifenwechsel & Lagerung",
     copy:
-      "Rechtzeitig Termin für den Reifenwechsel vor Wintereinbruch. Großräumige, geschützte Flächen für die Lagerung Ihrer gewechselten Reifen.",
-    bullets: ["Reifenwechsel", "Sichere Lagerung", "Vor Wintereinbruch"],
+      "Wir wechseln Ihre Räder passend zur Saison und können Ihre Reifen auf Wunsch bis zum nächsten Wechsel bei uns einlagern.",
+    bullets: ["Reifenwechsel", "Reifenlagerung", "Sommer- und Winterreifen"],
     image: "/images/leistungen/reifenwechsel-lagerung.jpg"
   },
   {
@@ -61,8 +59,14 @@ const services: Service[] = [
     slug: "kfz-service",
     title: "KFZ-Service",
     copy:
-      "Umfassender KFZ-Service: Bremsen und Bremsflüssigkeit, Stoßdämpfer, Zahnriemen, Motor, Getriebe, Fahrwerk bis zur Klimaanlage. Ein Ansprechpartner für alles.",
-    bullets: ["Bremse & Stoßdämpfer", "Motor & Getriebe", "Fahrwerk & Klima"],
+      "Wir übernehmen Wartungen und Reparaturen an vielen wichtigen Bauteilen Ihres Fahrzeugs.",
+    bullets: [
+      "Bremsen und Stoßdämpfer",
+      "Motor und Getriebe",
+      "Fahrwerk",
+      "Klimaanlage",
+      "Zahnriemen"
+    ],
     image:
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80"
   },
@@ -71,8 +75,8 @@ const services: Service[] = [
     slug: "oelwechsel",
     title: "Ölwechsel",
     copy:
-      "Damit Ihr Fahrzeug wie geschmiert läuft, einen niedrigen Verbrauch hält und ohne Geräuschentwicklung lange lebt: regelmäßiger Ölwechsel. MOTUL Öl-Station.",
-    bullets: ["Regelmäßiger Wechsel", "MOTUL Öl-Station", "Langer Motorlauf"],
+      "Wir führen den Ölwechsel passend zu Ihrem Fahrzeug nach Herstellervorgaben durch und verwenden hochwertige Motoröle.",
+    bullets: ["Öl- und Filterwechsel", "Passendes Motoröl für Ihr Fahrzeug", "MOTUL Öl-Station"],
     image: "/images/leistungen/oelwechsel.jpg"
   },
   {
@@ -80,8 +84,8 @@ const services: Service[] = [
     slug: "motorrad",
     title: "Motorrad-Service",
     copy:
-      "Auch Motorräder bringen wir in unserer Werkstatt wieder auf die Straße. Sprechen Sie uns an für Termin und Umfang.",
-    bullets: ["Wartung & Reparatur", "Terminabsprache direkt", "In Saarlouis"],
+      "Auch Motorräder sind bei uns willkommen. Für Wartungen und Reparaturen sprechen Sie uns einfach an.",
+    bullets: ["Wartung", "Reparaturen", "Persönliche Terminabsprache"],
     image:
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80"
   }
@@ -196,20 +200,20 @@ export default function ServicesShowcase() {
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <p className="inline-flex items-center gap-2 rounded-full glass-chip px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-white/85">
                 <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-                Portfolio
+                Unsere Leistungen
               </p>
               <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40">
                 Sektion 02
               </span>
             </div>
             <h2 className="max-w-2xl text-[clamp(2.2rem,5vw,4rem)] font-semibold leading-[1.02] tracking-tightest">
-              Alles für Ihren Wagen.<br />
-              <span className="text-white/50">Aus einer Meisterhand.</span>
+              Alles rund um<br />
+              <span className="text-white/50">Ihr Fahrzeug.</span>
             </h2>
           </div>
           <p className="max-w-md text-[16px] leading-relaxed text-white/60">
-            Sieben Kernleistungen, ein Betrieb. Vom Ölwechsel bis zur
-            HU-Vorbereitung: Meisterhand, ehrlich beraten, sauber ausgeführt.
+            Von der Inspektion über den Reifenwechsel bis zur Reparatur: Bei
+            uns bekommen Sie viele Leistungen direkt aus einer Hand.
           </p>
         </div>
 
