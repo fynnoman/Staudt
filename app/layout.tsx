@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MotionProvider from "@/components/MotionProvider";
+import CookieBanner from "@/components/CookieBanner";
 import { BusinessJsonLd, WebSiteJsonLd } from "@/components/JsonLd";
 
 export const viewport: Viewport = {
@@ -79,6 +80,7 @@ export default function RootLayout({
           <Nav />
           <main>{children}</main>
           <Footer />
+          <CookieBanner />
         </MotionProvider>
       </body>
     </html>

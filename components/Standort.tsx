@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import MapConsent from "./MapConsent";
 
 export default function Standort() {
   return (
@@ -94,11 +95,9 @@ export default function Standort() {
             className="glass relative overflow-hidden rounded-3xl md:col-span-7"
           >
             <div className="aspect-square w-full md:aspect-[4/3]">
-              <iframe
+              <MapConsent
                 title="Standort Fahrzeugtechnik Staudt"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=6.7655%2C49.3156%2C6.7855%2C49.3296&layer=mapnik&marker=49.3226%2C6.7755"
-                className="h-full w-full grayscale contrast-[1.05] [filter:invert(0.92)_hue-rotate(180deg)]"
-                loading="lazy"
               />
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/5" />
