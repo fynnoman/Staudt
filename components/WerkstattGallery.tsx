@@ -5,17 +5,17 @@ import Image from "next/image";
 
 const shots = [
   {
-    src: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80",
+    src: "/images/werkstatt-hebebuehne.png",
     caption: "Auf der Bühne",
     meta: "Fahrwerk"
   },
   {
-    src: "https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=1200&q=80",
+    src: "/images/werkstatt-praezises-werkzeug.png",
     caption: "Präzises Werkzeug",
     meta: "Werkbank"
   },
   {
-    src: "https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1200&q=80",
+    src: "/images/werkstatt-bremsen.png",
     caption: "Bremsen frisch",
     meta: "Service"
   },

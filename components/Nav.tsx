@@ -12,6 +12,7 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (open) document.body.style.overflow = "hidden";
@@ -21,13 +22,32 @@ export default function Nav() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       <header
         className="sticky top-0 z-50 w-full"
         style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
-        <div className="mx-auto mt-3 flex h-[60px] max-w-7xl items-center justify-between gap-3 px-4 md:h-[64px] md:gap-6 md:px-8">
+        <div
+          aria-hidden
+          className={`pointer-events-none absolute inset-0 transition-opacity duration-300 ${
+            scrolled ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(5,6,8,0.78) 0%, rgba(5,6,8,0.55) 60%, rgba(5,6,8,0) 100%)",
+            backdropFilter: "blur(14px) saturate(140%)",
+            WebkitBackdropFilter: "blur(14px) saturate(140%)"
+          }}
+        />
+        <div className="relative mx-auto mt-3 flex h-[60px] max-w-7xl items-center justify-between gap-3 px-4 md:h-[64px] md:gap-6 md:px-8">
           <div className="glass-strong flex h-full w-full items-center justify-between gap-2 rounded-2xl pl-3 pr-2 md:px-6">
             <Link href="/" className="group flex min-w-0 items-center gap-2.5 md:gap-3">
               <span className="relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-xl bg-black shadow-signal">

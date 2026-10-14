@@ -84,6 +84,17 @@ export default function Footer() {
             © {new Date().getFullYear()} Fahrzeugtechnik Staudt · Inhaber Eric Staudt
           </p>
           <p className="text-xs text-white/40">
+            In Zusammenarbeit mit{" "}
+            <a
+              href="https://fylumarketing.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 underline-offset-4 transition-colors hover:text-white hover:underline"
+            >
+              Fylu Marketing
+            </a>
+          </p>
+          <p className="text-xs text-white/40">
             Meisterbetrieb · Saarland · DE
           </p>
         </div>
