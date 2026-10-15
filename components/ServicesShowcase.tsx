@@ -86,8 +86,7 @@ const services: Service[] = [
     copy:
       "Auch Motorräder sind bei uns willkommen. Für Wartungen und Reparaturen sprechen Sie uns einfach an.",
     bullets: ["Wartung", "Reparaturen", "Persönliche Terminabsprache"],
-    image:
-      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80"
+    image: "/images/leistungen/motorrad.png"
   }
 ];
 

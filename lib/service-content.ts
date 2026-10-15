@@ -156,8 +156,7 @@ export const SERVICE_CONTENT: Record<ServiceSlug, ServiceContent> = {
   motorrad: {
     slug: "motorrad",
     title: "Motorrad-Service",
-    heroImage:
-      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/leistungen/motorrad.png",
     heroImageAlt: "Motorrad in der Meisterwerkstatt",
     lead:
       "Neben Autos kümmern wir uns auch um Motorräder.",
